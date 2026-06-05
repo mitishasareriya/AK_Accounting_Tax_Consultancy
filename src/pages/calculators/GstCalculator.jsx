@@ -70,7 +70,7 @@ Grand Total: ₹${formatCurrency(results.totalAmount)}
       <PageHeader
         title="GST Calculator"
         subtitle="Calculate Goods and Services Tax instantly"
-        bgImage="/images/demo-it-business-title-bg_1.png"
+        bgImage="/AK_Accounting_Tax_Consultancy/images/demo-it-business-title-bg_1.png"
         animeProps='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" '
         colClass="col-12 col-xl-8 col-lg-10 col-md-10 text-center text-md-start"
       />

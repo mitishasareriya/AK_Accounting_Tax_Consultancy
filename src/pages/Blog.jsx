@@ -18,7 +18,7 @@ export const Blog = () => {
       date: '30 August 2021',
       author: 'Den viliamson',
       likes: 25,
-      img: '/images/demo-corporate-blog-01.jpg'
+      img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-01.jpg'
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export const Blog = () => {
       date: '28 August 2021',
       author: 'Hugh macleod',
       likes: 58,
-      img: '/images/demo-corporate-blog-02.jpg'
+      img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-02.jpg'
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ export const Blog = () => {
       date: '26 August 2021',
       author: 'Walton smith',
       likes: 75,
-      img: '/images/demo-corporate-blog-03.jpg'
+      img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-03.jpg'
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ export const Blog = () => {
       date: '30 August 2021',
       author: 'Bill gardner',
       likes: 22,
-      img: '/images/demo-corporate-blog-04.jpg'
+      img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-04.jpg'
     },
     {
       id: 5,
@@ -58,7 +58,7 @@ export const Blog = () => {
       date: '18 August 2021',
       author: 'Hugh macleod',
       likes: 58,
-      img: '/images/demo-corporate-blog-05.jpg'
+      img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-05.jpg'
     },
     {
       id: 6,
@@ -68,7 +68,7 @@ export const Blog = () => {
       date: '15 August 2021',
       author: 'Den viliamson',
       likes: 46,
-      img: '/images/demo-corporate-blog-06.jpg'
+      img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-06.jpg'
     }
   ];
 
@@ -81,7 +81,7 @@ export const Blog = () => {
             <PageHeader 
         title="Latest blog"
         subtitle="Grow your business with us"
-        bgImage="/images/demo-it-business-blog-title-bg.jpg"
+        bgImage="/AK_Accounting_Tax_Consultancy/images/demo-it-business-blog-title-bg.jpg"
         animeProps='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" '
       />
       {/* end page title */}

@@ -12,7 +12,7 @@ import { PageHeader } from '../components/common/PageHeader';
 const pageTitleData = {
   title: 'About AK Accounting & Tax Consultancy',
   subtitle: 'Helping Businesses Grow with Smart Financial Solutions',
-  bgImage: '/images/demo-it-business-about-title-bg_1.png'
+  bgImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg_1.png'
 };
 
 const featuresGrid = [
@@ -107,11 +107,11 @@ const processSteps = [
 ];
 
 const clientLogos = [
-  { src: '/images/logo-walmart-dark-blue.svg', mbClass: 'md-mb-40px' },
-  { src: '/images/logo-netflix-dark-blue.svg', mbClass: 'md-mb-40px' },
-  { src: '/images/logo-invision-dark-blue.svg', mbClass: 'md-mb-40px' },
-  { src: '/images/logo-yahoo-dark-blue.svg', mbClass: 'sm-mb-40px' },
-  { src: '/images/logo-amazon-dark-blue.svg', mbClass: '' }
+  { src: '/AK_Accounting_Tax_Consultancy/images/logo-walmart-dark-blue.svg', mbClass: 'md-mb-40px' },
+  { src: '/AK_Accounting_Tax_Consultancy/images/logo-netflix-dark-blue.svg', mbClass: 'md-mb-40px' },
+  { src: '/AK_Accounting_Tax_Consultancy/images/logo-invision-dark-blue.svg', mbClass: 'md-mb-40px' },
+  { src: '/AK_Accounting_Tax_Consultancy/images/logo-yahoo-dark-blue.svg', mbClass: 'sm-mb-40px' },
+  { src: '/AK_Accounting_Tax_Consultancy/images/logo-amazon-dark-blue.svg', mbClass: '' }
 ];
 
 // --- REUSABLE COMPONENTS ---
@@ -220,7 +220,7 @@ export const About = () => {
       {/* end page title */}
 
       {/* start section */}
-      <section className="position-relative pt-3 sm-pt-50px overlap-height background-no-repeat background-position-left-top bg-white" style={{ backgroundImage: `url('/images/demo-it-business-about-bg.jpg')` }}>
+      <section className="position-relative pt-3 sm-pt-50px overlap-height background-no-repeat background-position-left-top bg-white" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-bg.jpg')` }}>
         <div className="container overlap-gap-section">
           <div className="row align-items-center mb-6" data-anime={slideUpAnime}>
             <div className="col-lg-6 md-mb-50px">
@@ -301,7 +301,7 @@ export const About = () => {
       {/* end section */}
 
       {/* start section - creative process */}
-      <section className="bg-very-light-gray pt-0 background-no-repeat background-position-left-top position-relative" style={{ backgroundImage: `url('/images/demo-it-business-about-bg2.jpg')` }}>
+      <section className="bg-very-light-gray pt-0 background-no-repeat background-position-left-top position-relative" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-bg2.jpg')` }}>
         <div className="container">
           <div className="row align-items-center justify-content-center mb-7" data-anime={slideUpAnime}>
             <div className="col-xl-5 col-lg-6 mb-30px">
@@ -315,7 +315,7 @@ export const About = () => {
             </div>
             <div className="col-lg-6 text-center md-mb-20px offset-xl-1">
               <figure className="position-relative mb-0 overflow-hidden">
-                <img src="/images/demo-it-business-about-07_1.png" className="w-100 border-radius-6px" alt="" />
+                <img src="/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-07_1.png" className="w-100 border-radius-6px" alt="" />
                 <figcaption className="position-absolute border-radius-4px text-center right-30px bottom-30px pt-35px pb-35px ps-5px pe-5px bg-white-transparent glass-effect">
                   <span className="fs-80 lh-75 text-dark-gray ls-minus-4px position-relative fw-800 mb-5px d-block alt-font text-5xl">6<sub className="fs-40 lh-40 text-dark-gray position-relative top-minus-40px text-xl">+</sub></span>
                   <span className="d-block mx-auto fs-14 fw-700 lh-20 w-200px text-center text-dark-gray text-uppercase">Years working experience</span>

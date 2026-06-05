@@ -1,0 +1,5 @@
+src/utils/animations.js
+src/utils/calculatorUtils.js
+src/hooks/useAnime.js
+public/*
+dist/*

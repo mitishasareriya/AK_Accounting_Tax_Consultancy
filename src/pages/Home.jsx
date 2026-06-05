@@ -8,17 +8,17 @@ import { projectsData } from '../data/projectsData';
 // --- DATA ARRAYS ---
 const featuresList = [
   {
-    icon: '/images/demo-it-business-icon-01.gif',
+    icon: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-icon-01.gif',
     title: 'GST & Tax Filing',
     desc: 'Professional GST registration, return filing and taxation solutions for businesses across India.'
   },
   {
-    icon: '/images/demo-it-business-icon-02.gif',
+    icon: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-icon-02.gif',
     title: 'Business Compliance',
     desc: 'Stay compliant with ROC filing, company registration and statutory regulations easily.'
   },
   {
-    icon: '/images/demo-it-business-icon-03.gif',
+    icon: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-icon-03.gif',
     title: 'Financial Growth',
     desc: 'Expert accounting, auditing and financial planning services to help your business grow.'
   }
@@ -41,11 +41,11 @@ const progressBars = [
 
 
 const brandLogos = [
-  '/images/logo-walmart-dark-blue.svg',
-  '/images/logo-netflix-dark-blue.svg',
-  '/images/logo-invision-dark-blue.svg',
-  '/images/logo-yahoo-dark-blue.svg',
-  '/images/logo-amazon-dark-blue.svg'
+  '/AK_Accounting_Tax_Consultancy/images/logo-walmart-dark-blue.svg',
+  '/AK_Accounting_Tax_Consultancy/images/logo-netflix-dark-blue.svg',
+  '/AK_Accounting_Tax_Consultancy/images/logo-invision-dark-blue.svg',
+  '/AK_Accounting_Tax_Consultancy/images/logo-yahoo-dark-blue.svg',
+  '/AK_Accounting_Tax_Consultancy/images/logo-amazon-dark-blue.svg'
 ];
 
 const servicesList = servicesData;
@@ -82,37 +82,37 @@ const testimonials = [
   {
     name: 'Rajesh Sharma, Textile Business Owner',
     quote: 'Their accounting and GST services helped us streamline our business operations and stay fully compliant with Indian tax regulations.',
-    logo: '/images/logo-monday-dark-blue-01.svg'
+    logo: '/AK_Accounting_Tax_Consultancy/images/logo-monday-dark-blue-01.svg'
   },
   {
     name: 'Priya Mehta, Startup Founder',
     quote: 'Very professional consultancy team. They handled our company registration, taxation and ROC filings smoothly.',
-    logo: '/images/logo-loitech-dark-blue.svg'
+    logo: '/AK_Accounting_Tax_Consultancy/images/logo-loitech-dark-blue.svg'
   },
   {
     name: 'Amit Patel, Manufacturing Company',
     quote: 'Excellent support in audit and financial planning. Their expertise helped us improve profitability and compliance.',
-    logo: '/images/logo-invision-dark-blue.svg'
+    logo: '/AK_Accounting_Tax_Consultancy/images/logo-invision-dark-blue.svg'
   }
 ];
 
 const growthCards = [
   {
-    img: '/images/logo-monday-dark-gray-02.svg',
+    img: '/AK_Accounting_Tax_Consultancy/images/logo-monday-dark-gray-02.svg',
     title: 'GST & Tax Compliance',
     growth: '98%',
     paddingClass: 'p-15px lg-ps-25px lg-pe-25px md-ps-15px md-pe-15px'
   },
 
   {
-    img: '/images/logo-dropbox-dark-gray-02.svg',
+    img: '/AK_Accounting_Tax_Consultancy/images/logo-dropbox-dark-gray-02.svg',
     title: 'Financial Accuracy',
     growth: '95%',
     paddingClass: 'border-1 border-color-extra-medium-gray p-15px'
   },
 
   {
-    img: '/images/logo-slack-dark-gray-02.svg',
+    img: '/AK_Accounting_Tax_Consultancy/images/logo-slack-dark-gray-02.svg',
     title: 'Business Growth Support',
     growth: '90%',
     paddingClass: 'border-1 border-color-extra-medium-gray p-15px'
@@ -275,7 +275,7 @@ export const Home = () => {
   return (
     <div>
       {/* 1. HERO SECTION */}
-      <section className="cover-background full-screen ipad-top-space-margin py-0 md-h-750px sm-h-650px" style={{ backgroundImage: `url('/images/demo-it-business-banner-bg_1.png')` }}>
+      <section className="cover-background full-screen ipad-top-space-margin py-0 md-h-750px sm-h-650px" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-banner-bg_1.png')` }}>
         <div className="opacity-very-light bg-black"></div>
         <ShapeWaveBottom />
         <div className="container h-100">
@@ -314,10 +314,10 @@ export const Home = () => {
           <div className="row mb-10 align-items-center">
             <div className="col-lg-5 position-relative md-mb-20">
               <div className="w-70 xs-w-80">
-                <img src="/images/demo-it-business-01.jpg" alt="" className="border-radius-8px w-100" />
+                <img src="/AK_Accounting_Tax_Consultancy/images/demo-it-business-01.jpg" alt="" className="border-radius-8px w-100" />
               </div>
               <div className="w-60 overflow-hidden position-absolute right-minus-15px xs-right-15px xs-w-60 bottom-minus-50px">
-                <img src="/images/demo-it-business-02.jpg" alt="" className="border-radius-8px w-100 box-shadow-quadruple-large" />
+                <img src="/AK_Accounting_Tax_Consultancy/images/demo-it-business-02.jpg" alt="" className="border-radius-8px w-100 box-shadow-quadruple-large" />
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 offset-lg-1" data-anime={slideAnime}>
@@ -385,7 +385,7 @@ export const Home = () => {
         <div className="container">
           <div className="row align-items-center justify-content-center g-0" data-anime={fadeAnime}>
             <div className="col-auto d-flex align-items-center">
-              <img src="/images/demo-it-business-07.jpg" alt="" />
+              <img src="/AK_Accounting_Tax_Consultancy/images/demo-it-business-07.jpg" alt="" />
               <div className="fs-17 lh-26 last-paragraph-no-margin text-white pt-15px pb-15px fw-500">
                 <p>Save your precious time and effort spent for finding a solution. <Link to="/contact" className="text-decoration-line-bottom text-white">Contact us now</Link></p>
               </div>
@@ -423,7 +423,7 @@ export const Home = () => {
 
       {/* 7. TESTIMONIALS */}
       <section className="pt-0">
-        <div className="container background-no-repeat background-position-top" style={{ backgroundImage: `url('/images/demo-it-business-testimonial-bg.png')` }}>
+        <div className="container background-no-repeat background-position-top" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-testimonial-bg.png')` }}>
           <div className="row justify-content-center mb-2">
             <div className="col-xxl-6 col-lg-8 col-md-9 text-center" data-anime={slideAnime}>
               <h3 className="text-dark-gray fw-700 ls-minus-2px">Trusted by the world's fastest growing companies.</h3>
@@ -454,7 +454,7 @@ export const Home = () => {
       </section>
 
       {/* 8. CREATIVE SOLUTIONS BOTTOM HERO */}
-      <section className="cover-background one-third-screen sm-h-500px pb-0 position-relative bg-cover bg-center" style={{ backgroundImage: "url('/images/demo-it-business-08.jpg')" }}>
+      <section className="cover-background one-third-screen sm-h-500px pb-0 position-relative bg-cover bg-center" style={{ backgroundImage: "url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-08.jpg')" }}>
         <div className="opacity-extra-medium bg-dark-gray"></div>
         <div className="container h-100">
           <div className="row align-items-center justify-content-center h-100">

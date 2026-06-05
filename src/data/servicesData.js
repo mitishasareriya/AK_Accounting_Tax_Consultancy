@@ -31,12 +31,12 @@ export const servicesData = [
     slug: 'gst-registration',
     title: 'GST Registration & Filing',
     badge: 'GST',
-    image: '/images/demo-it-business-03.jpg',
+    image: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-03.jpg',
     shortDescription: 'Complete GST solutions including registration, return filing and compliance support.',
     header: {
       title: 'GST Registration & Filing',
       subtitle: 'Comprehensive Tax Solutions',
-      bgImage: '/images/demo-it-business-about-title-bg.jpg',
+      bgImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg.jpg',
     },
     overview: {
       badge: 'GST Compliance',
@@ -45,7 +45,7 @@ export const servicesData = [
       highlight: 'We are excited to help your business stay compliant and grow seamlessly.',
       yearsExperience: '15',
       featureBoxText: '10k+ businesses registered and compliant.',
-      mainImage: '/images/demo-it-business-services-details-01.jpg',
+      mainImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-01.jpg',
     },
     process: defaultProcess,
     stats: defaultStats,
@@ -57,7 +57,7 @@ export const servicesData = [
         'Legally authorized to collect tax from purchasers.',
         'Eligible to avail various other benefits and privileges under GST laws.'
       ],
-      videoImage: '/images/demo-it-business-services-details-02.jpg',
+      videoImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-02.jpg',
       videoUrl: 'https://www.youtube.com/'
     },
     faq: [
@@ -70,12 +70,12 @@ export const servicesData = [
     slug: 'income-tax',
     title: 'Income Tax Consultancy',
     badge: 'Tax',
-    image: '/images/demo-it-business-04.jpg',
+    image: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-04.jpg',
     shortDescription: 'Expert income tax planning and return filing services for individuals and businesses.',
     header: {
       title: 'Income Tax Consultancy',
       subtitle: 'Expert Tax Planning',
-      bgImage: '/images/demo-it-business-about-title-bg.jpg',
+      bgImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg.jpg',
     },
     overview: {
       badge: 'Taxation',
@@ -84,14 +84,14 @@ export const servicesData = [
       highlight: 'Maximizing your tax savings securely and efficiently.',
       yearsExperience: '15',
       featureBoxText: 'Thousands of happy tax filers.',
-      mainImage: '/images/demo-it-business-services-details-01.jpg',
+      mainImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-01.jpg',
     },
     process: defaultProcess,
     stats: defaultStats,
     benefits: {
       title: 'Benefits of timely ITR filing.',
       list: defaultBenefits,
-      videoImage: '/images/demo-it-business-services-details-02.jpg',
+      videoImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-02.jpg',
       videoUrl: 'https://www.youtube.com/'
     },
     faq: defaultFaq
@@ -100,12 +100,12 @@ export const servicesData = [
     slug: 'company-registration',
     title: 'Company Registration',
     badge: 'ROC',
-    image: '/images/demo-it-business-05.jpg',
+    image: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-05.jpg',
     shortDescription: 'Private limited, LLP and startup registration services with full legal guidance.',
     header: {
       title: 'Company Registration',
       subtitle: 'Start your business right',
-      bgImage: '/images/demo-it-business-about-title-bg.jpg',
+      bgImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg.jpg',
     },
     overview: {
       badge: 'ROC Compliance',
@@ -114,14 +114,14 @@ export const servicesData = [
       highlight: 'Your entrepreneurial journey starts here.',
       yearsExperience: '15',
       featureBoxText: 'Hundreds of startups successfully registered.',
-      mainImage: '/images/demo-it-business-services-details-01.jpg',
+      mainImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-01.jpg',
     },
     process: defaultProcess,
     stats: defaultStats,
     benefits: {
       title: 'Benefits of incorporating a company.',
       list: defaultBenefits,
-      videoImage: '/images/demo-it-business-services-details-02.jpg',
+      videoImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-02.jpg',
       videoUrl: 'https://www.youtube.com/'
     },
     faq: defaultFaq
@@ -130,12 +130,12 @@ export const servicesData = [
     slug: 'accounting-bookkeeping',
     title: 'Accounting & Bookkeeping',
     badge: 'Accounts',
-    image: '/images/demo-it-business-06.jpg',
+    image: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-06.jpg',
     shortDescription: 'Professional bookkeeping and accounting services for SMEs and enterprises.',
     header: {
       title: 'Accounting & Bookkeeping',
       subtitle: 'Precision in Financials',
-      bgImage: '/images/demo-it-business-about-title-bg.jpg',
+      bgImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg.jpg',
     },
     overview: {
       badge: 'Accounting',
@@ -144,14 +144,14 @@ export const servicesData = [
       highlight: 'Clean books, clear financial insights.',
       yearsExperience: '15',
       featureBoxText: 'Managing books for 500+ businesses.',
-      mainImage: '/images/demo-it-business-services-details-01.jpg',
+      mainImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-01.jpg',
     },
     process: defaultProcess,
     stats: defaultStats,
     benefits: {
       title: 'Benefits of outsourced bookkeeping.',
       list: defaultBenefits,
-      videoImage: '/images/demo-it-business-services-details-02.jpg',
+      videoImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-02.jpg',
       videoUrl: 'https://www.youtube.com/'
     },
     faq: defaultFaq
@@ -160,12 +160,12 @@ export const servicesData = [
     slug: 'audit-assurance',
     title: 'Audit & Assurance',
     badge: 'Audit',
-    image: '/images/demo-it-business-05.jpg',
+    image: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-05.jpg',
     shortDescription: 'Internal audit, statutory audit and financial reporting solutions.',
     header: {
       title: 'Audit & Assurance',
       subtitle: 'Transparent and compliant',
-      bgImage: '/images/demo-it-business-about-title-bg.jpg',
+      bgImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg.jpg',
     },
     overview: {
       badge: 'Auditing',
@@ -174,14 +174,14 @@ export const servicesData = [
       highlight: 'Mitigating risks with thorough financial scrutiny.',
       yearsExperience: '15',
       featureBoxText: 'Ensuring compliance and transparency.',
-      mainImage: '/images/demo-it-business-services-details-01.jpg',
+      mainImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-01.jpg',
     },
     process: defaultProcess,
     stats: defaultStats,
     benefits: {
       title: 'Benefits of regular auditing.',
       list: defaultBenefits,
-      videoImage: '/images/demo-it-business-services-details-02.jpg',
+      videoImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-02.jpg',
       videoUrl: 'https://www.youtube.com/'
     },
     faq: defaultFaq
@@ -190,12 +190,12 @@ export const servicesData = [
     slug: 'payroll-management',
     title: 'Payroll Management',
     badge: 'Payroll',
-    image: '/images/demo-it-business-06.jpg',
+    image: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-06.jpg',
     shortDescription: 'Simplified employee payroll, PF, ESIC and salary compliance management services.',
     header: {
       title: 'Payroll Management',
       subtitle: 'Effortless Employee Management',
-      bgImage: '/images/demo-it-business-about-title-bg.jpg',
+      bgImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg.jpg',
     },
     overview: {
       badge: 'HR Compliance',
@@ -204,14 +204,14 @@ export const servicesData = [
       highlight: 'Timely salaries, complete compliance.',
       yearsExperience: '15',
       featureBoxText: 'Handling payroll for over 5000 employees.',
-      mainImage: '/images/demo-it-business-services-details-01.jpg',
+      mainImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-01.jpg',
     },
     process: defaultProcess,
     stats: defaultStats,
     benefits: {
       title: 'Benefits of outsourced payroll.',
       list: defaultBenefits,
-      videoImage: '/images/demo-it-business-services-details-02.jpg',
+      videoImage: '/AK_Accounting_Tax_Consultancy/images/demo-it-business-services-details-02.jpg',
       videoUrl: 'https://www.youtube.com/'
     },
     faq: defaultFaq

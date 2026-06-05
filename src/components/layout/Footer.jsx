@@ -9,7 +9,7 @@ export const Footer = () => {
           {/* start footer column */}
           <div className="col-6 col-xl-3 col-lg-12 col-sm-6 last-paragraph-no-margin text-xl-start text-lg-center order-sm-1 lg-mb-180px sm-mb-30px">
             <Link to="/" className="footer-logo mb-15px d-inline-block">
-              <img src="/images/logo_horizontal.svg" data-at2x="/images/demo-it-business-logo-black@2x.png" alt="" />
+              <img src="/AK_Accounting_Tax_Consultancy/images/logo_horizontal.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-black@2x.png" alt="" />
             </Link>
             <p className="lh-28 w-90 xl-w-100 mx-lg-auto mx-xl-0">
               Helping businesses grow with trusted accounting, taxation, GST compliance,

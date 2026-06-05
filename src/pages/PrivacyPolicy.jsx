@@ -10,7 +10,7 @@ export const PrivacyPolicy = () => {
     <div>
             <PageHeader 
         title="Privacy Policy"
-        bgImage="/images/demo-it-business-contact-title-bg.jpg"
+        bgImage="/AK_Accounting_Tax_Consultancy/images/demo-it-business-contact-title-bg.jpg"
         animeProps='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" '
         colClass="col-12 col-md-6"
       />

@@ -157,18 +157,18 @@ export const ServicesDetails = () => {
           </div>
 
           <div className="row row-cols-1 row-cols-lg-5 row-cols-md-3 row-cols-sm-2 clients-style-06 justify-content-center ps-3 pe-3 xs-mt-40px" data-anime='{ "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            <div className="col client-box text-center md-mb-40px"><a href="#"><img src="/images/logo-walmart-dark-blue.svg" alt="" /></a></div>
-            <div className="col client-box text-center md-mb-40px"><a href="#"><img src="/images/logo-netflix-dark-blue.svg" alt="" /></a></div>
-            <div className="col client-box text-center md-mb-40px"><a href="#"><img src="/images/logo-invision-dark-blue.svg" alt="" /></a></div>
-            <div className="col client-box text-center sm-mb-40px"><a href="#"><img src="/images/logo-yahoo-dark-blue.svg" alt="" /></a></div>
-            <div className="col client-box text-center"><a href="#"><img src="/images/logo-amazon-dark-blue.svg" alt="" /></a></div>
+            <div className="col client-box text-center md-mb-40px"><a href="#"><img src="/AK_Accounting_Tax_Consultancy/images/logo-walmart-dark-blue.svg" alt="" /></a></div>
+            <div className="col client-box text-center md-mb-40px"><a href="#"><img src="/AK_Accounting_Tax_Consultancy/images/logo-netflix-dark-blue.svg" alt="" /></a></div>
+            <div className="col client-box text-center md-mb-40px"><a href="#"><img src="/AK_Accounting_Tax_Consultancy/images/logo-invision-dark-blue.svg" alt="" /></a></div>
+            <div className="col client-box text-center sm-mb-40px"><a href="#"><img src="/AK_Accounting_Tax_Consultancy/images/logo-yahoo-dark-blue.svg" alt="" /></a></div>
+            <div className="col client-box text-center"><a href="#"><img src="/AK_Accounting_Tax_Consultancy/images/logo-amazon-dark-blue.svg" alt="" /></a></div>
           </div> 
 
           {/* Frequently Asked Questions */}
           <div className="row align-items-center mt-12">
             <div className="col-12">
               <div className="bg-very-light-gray p-9 md-p-6 xs-p-9 border-radius-6px overflow-hidden position-relative">
-                <div className="position-absolute right-70px lg-right-20px top-minus-20px w-250px sm-w-180px xs-w-150px opacity-1"><img src="/images/demo-business-services-details-faq-icon.png" alt="" /></div>
+                <div className="position-absolute right-70px lg-right-20px top-minus-20px w-250px sm-w-180px xs-w-150px opacity-1"><img src="/AK_Accounting_Tax_Consultancy/images/demo-business-services-details-faq-icon.png" alt="" /></div>
                 <span className="ps-25px pe-25px mb-20px text-uppercase text-base-color fs-12 lh-40 fw-700 border-radius-100px bg-gradient-light-gray-transparent d-inline-flex align-items-center">
                   <i className="bi bi-patch-check fs-16 me-5px"></i>Basic information
                 </span>

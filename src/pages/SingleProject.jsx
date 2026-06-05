@@ -9,9 +9,9 @@ export const SingleProject = () => {
   // Simple state to simulate Swiper slider transitions
   const [sliderIndex, setSliderIndex] = useState(0);
   const sliderImages = [
-    '/images/portfolio-single-gallery-02.jpg',
-    '/images/portfolio-single-gallery-03.jpg',
-    '/images/portfolio-single-gallery-04.jpg'
+    '/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-02.jpg',
+    '/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-03.jpg',
+    '/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-04.jpg'
   ];
 
   const handleNext = () => {
@@ -27,7 +27,7 @@ export const SingleProject = () => {
       {/* start page title banner */}
             <PageHeader 
         title=""
-        bgImage="/images/portfolio-single-gallery-01-a.jpg"
+        bgImage="/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-01-a.jpg"
         colClass="col-12 col-md-6"
         titleClass=""
       />
@@ -56,7 +56,7 @@ export const SingleProject = () => {
       {/* end section */}
 
       {/* start section */}
-      <section className="py-24 bg-very-light-gray" style={{ backgroundImage: `url('/images/portfolio-single-gallery-07.jpg')`, backgroundSize: 'cover' }}>
+      <section className="py-24 bg-very-light-gray" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-07.jpg')`, backgroundSize: 'cover' }}>
         <div className="container">
           <div className="row">
             <div className="col-12 overlap-section">
@@ -71,7 +71,7 @@ export const SingleProject = () => {
               </div>
             </div>
             <div className="col-12 mt-8 text-center flex justify-content-center"> 
-              <img src="/images/portfolio-single-gallery-06.png" alt="" className="mx-auto max-w-full" /> 
+              <img src="/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-06.png" alt="" className="mx-auto max-w-full" /> 
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export const SingleProject = () => {
       {/* end section */} 
 
       {/* start section */}
-      <section className="py-24 bg-white" style={{ backgroundImage: `url('/images/portfolio-single-gallery-11.jpg')`, backgroundSize: 'cover' }}>
+      <section className="py-24 bg-white" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-11.jpg')`, backgroundSize: 'cover' }}>
         <div className="container">
           <div className="row">
             <div className="col px-0 sm-ps-15px sm-pe-15px">
@@ -103,7 +103,7 @@ export const SingleProject = () => {
                 <li className="md:col-span-2 transition-inner-all">
                   <div className="gallery-box overflow-hidden rounded shadow-sm">
                     <div className="position-relative gallery-image bg-dark-gray overflow-hidden">
-                      <img src="/images/portfolio-single-gallery-08.jpg" alt="" className="w-full object-cover" />
+                      <img src="/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-08.jpg" alt="" className="w-full object-cover" />
                     </div>
                   </div>
                 </li>
@@ -112,7 +112,7 @@ export const SingleProject = () => {
                 <li className="transition-inner-all">
                   <div className="gallery-box overflow-hidden rounded shadow-sm">
                     <div className="position-relative gallery-image bg-dark-gray overflow-hidden">
-                      <img src="/images/portfolio-single-gallery-09.jpg" alt="" className="w-full object-cover" />
+                      <img src="/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-09.jpg" alt="" className="w-full object-cover" />
                     </div>
                   </div>
                 </li>
@@ -121,7 +121,7 @@ export const SingleProject = () => {
                 <li className="transition-inner-all">
                   <div className="gallery-box overflow-hidden rounded shadow-sm">
                     <div className="position-relative gallery-image bg-dark-gray overflow-hidden">
-                      <img src="/images/portfolio-single-gallery-10.jpg" alt="" className="w-full object-cover" />
+                      <img src="/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-10.jpg" alt="" className="w-full object-cover" />
                     </div>
                   </div>
                 </li>
@@ -130,7 +130,7 @@ export const SingleProject = () => {
                 <li className="md:col-span-2 transition-inner-all">
                   <div className="gallery-box overflow-hidden rounded shadow-sm">
                     <div className="position-relative gallery-image bg-dark-gray overflow-hidden">
-                      <img src="/images/portfolio-single-gallery-02.jpg" alt="" className="w-full object-cover" />
+                      <img src="/AK_Accounting_Tax_Consultancy/images/portfolio-single-gallery-02.jpg" alt="" className="w-full object-cover" />
                     </div>
                   </div>
                 </li>

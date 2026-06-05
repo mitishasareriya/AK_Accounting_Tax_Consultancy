@@ -8,7 +8,7 @@ export const BlogDetails = () => {
   return (
     <div>
       {/* start top header hero section */}
-      <section className="full-screen ipad-top-space-margin sm-h-600px bg-cover bg-center relative" style={{ backgroundImage: `url('/images/demo-corporate-main-slider-02.jpg')` }}>
+      <section className="full-screen ipad-top-space-margin sm-h-600px bg-cover bg-center relative" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-corporate-main-slider-02.jpg')` }}>
         <div className="opacity-light bg-dark-gray absolute inset-0 bg-black/40"></div>
         <div className="container-fluid z-index-1 position-relative">
           <div className="row align-items-center justify-content-center h-500px sm-h-300px">
@@ -43,7 +43,7 @@ export const BlogDetails = () => {
       {/* end section */}
 
       {/* start section - visual mid-banner */}
-      <section className="py-32 bg-cover bg-center" style={{ backgroundImage: `url('/images/demo-business-blog-single-creative-bg.jpg')` }}></section>
+      <section className="py-32 bg-cover bg-center" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-business-blog-single-creative-bg.jpg')` }}></section>
       {/* end section */}
 
       {/* start section */}
@@ -64,8 +64,8 @@ export const BlogDetails = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 space-y-6">
-              <img src="/images/demo-business-blog-single-creative-01.jpg" className="w-100 border-radius-5px rounded shadow-sm" alt="" />
-              <img src="/images/demo-business-blog-single-creative-02.jpg" className="w-100 border-radius-5px rounded shadow-sm" alt="" />
+              <img src="/AK_Accounting_Tax_Consultancy/images/demo-business-blog-single-creative-01.jpg" className="w-100 border-radius-5px rounded shadow-sm" alt="" />
+              <img src="/AK_Accounting_Tax_Consultancy/images/demo-business-blog-single-creative-02.jpg" className="w-100 border-radius-5px rounded shadow-sm" alt="" />
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ export const BlogDetails = () => {
                 <div className="col-12 mb-6 sm-mb-10">
                   <div className="bg-very-light-gray d-block d-md-flex w-100 box-shadow-extra-large align-items-center border-radius-4px p-8 rounded shadow-sm">
                     <div className="w-140px text-center me-50px sm-mx-auto flex-shrink-0">
-                      <img src="/images/avtar-07.jpg" className="rounded-circle w-120px mx-auto" alt="" />
+                      <img src="/AK_Accounting_Tax_Consultancy/images/avtar-07.jpg" className="rounded-circle w-120px mx-auto" alt="" />
                       <Link to="/blog" className="text-dark-gray fw-500 mt-20px d-inline-block lh-20 font-bold">Colene Landin</Link>
                       <span className="fs-15 lh-20 d-block sm-mb-15px text-medium-gray text-xs">Co-founder</span>
                     </div>
@@ -154,9 +154,9 @@ export const BlogDetails = () => {
             <div className="col-12 px-0">
               <ul className="blog-grid blog-wrapper grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { title: 'Build up healthy habits and strong peaceful life', cat: 'Agency', img: '/images/demo-corporate-blog-01.jpg', author: 'Den viliamson', date: '30 August 2021', likes: 25 },
-                  { title: 'How to bring the season into your great marketing', cat: 'Luxurious', img: '/images/demo-corporate-blog-02.jpg', author: 'Hugh macleod', date: '28 August 2021', likes: 58 },
-                  { title: 'Be the strong willed one the public relationship', cat: 'Business', img: '/images/demo-corporate-blog-03.jpg', author: 'Walton smith', date: '26 August 2021', likes: 75 }
+                  { title: 'Build up healthy habits and strong peaceful life', cat: 'Agency', img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-01.jpg', author: 'Den viliamson', date: '30 August 2021', likes: 25 },
+                  { title: 'How to bring the season into your great marketing', cat: 'Luxurious', img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-02.jpg', author: 'Hugh macleod', date: '28 August 2021', likes: 58 },
+                  { title: 'Be the strong willed one the public relationship', cat: 'Business', img: '/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-03.jpg', author: 'Walton smith', date: '26 August 2021', likes: 75 }
                 ].map((post, idx) => (
                   <li key={idx} className="grid-item">
                     <div className="card border-0 border-radius-5px box-shadow-quadruple-large overflow-hidden bg-white shadow-md">
@@ -203,7 +203,7 @@ export const BlogDetails = () => {
                 <li className="border-b pb-6">
                   <div className="d-block d-md-flex w-100 align-items-md-start">
                     <div className="w-90px sm-w-65px sm-mb-10px flex-shrink-0">
-                      <img src="/images/avtar-18.jpg" className="rounded-circle" alt="" />
+                      <img src="/AK_Accounting_Tax_Consultancy/images/avtar-18.jpg" className="rounded-circle" alt="" />
                     </div>
                     <div className="w-100 ps-30px last-paragraph-no-margin sm-ps-0 mt-4 md:mt-0">
                       <div className="flex justify-between items-center">
@@ -220,7 +220,7 @@ export const BlogDetails = () => {
                     <li className="border-t pt-6">
                       <div className="d-block d-md-flex w-100 align-items-md-start">
                         <div className="w-90px sm-w-65px sm-mb-10px flex-shrink-0">
-                          <img src="/images/avtar-19.jpg" className="rounded-circle" alt="" />
+                          <img src="/AK_Accounting_Tax_Consultancy/images/avtar-19.jpg" className="rounded-circle" alt="" />
                         </div>
                         <div className="w-100 ps-30px last-paragraph-no-margin sm-ps-0 mt-4 md:mt-0">
                           <div className="flex justify-between items-center">
@@ -235,7 +235,7 @@ export const BlogDetails = () => {
                     <li className="bg-very-light-gray p-6 rounded shadow-sm">
                       <div className="d-block d-md-flex w-100 align-items-md-start">
                         <div className="w-90px sm-w-65px sm-mb-10px flex-shrink-0">
-                          <img src="/images/avtar-17.jpg" className="rounded-circle" alt="" />
+                          <img src="/AK_Accounting_Tax_Consultancy/images/avtar-17.jpg" className="rounded-circle" alt="" />
                         </div>
                         <div className="w-100 ps-30px last-paragraph-no-margin sm-ps-0 mt-4 md:mt-0">
                           <div className="flex justify-between items-center">
@@ -253,7 +253,7 @@ export const BlogDetails = () => {
                 <li className="pb-6">
                   <div className="d-block d-md-flex w-100 align-items-md-start">
                     <div className="w-90px sm-w-65px sm-mb-10px flex-shrink-0">
-                      <img src="/images/avtar-18.jpg" className="rounded-circle" alt="" />
+                      <img src="/AK_Accounting_Tax_Consultancy/images/avtar-18.jpg" className="rounded-circle" alt="" />
                     </div>
                     <div className="w-100 ps-30px last-paragraph-no-margin sm-ps-0 mt-4 md:mt-0">
                       <div className="flex justify-between items-center">

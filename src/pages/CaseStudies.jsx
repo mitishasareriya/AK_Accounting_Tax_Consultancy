@@ -30,7 +30,7 @@ export const CaseStudies = () => {
             <PageHeader 
         title="Case studies"
         subtitle="Our selected projects"
-        bgImage="/images/demo-it-business-about-title-bg_1.png"
+        bgImage="/AK_Accounting_Tax_Consultancy/images/demo-it-business-about-title-bg_1.png"
         iconClass="bi bi-patch-check text-white icon-small me-10px"
         animeProps='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" '
       />

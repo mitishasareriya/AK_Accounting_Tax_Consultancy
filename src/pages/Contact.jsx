@@ -11,7 +11,7 @@ const locations = [
     address: 'Heera Panna Complex, Jagnath Plot, Rajkot, Gujarat - 360001',
     phone: '+91 9714343087',
     email: 'ak.taxconsultancy86@gmail.com',
-    img: '/images/contact_3.png',
+    img: '/AK_Accounting_Tax_Consultancy/images/contact_3.png',
     mapUrl: 'https://maps.google.com/?q=Heera+Panna+Complex+Rajkot',
     wrapperClass: 'mb-30px'
   },
@@ -20,7 +20,7 @@ const locations = [
     address: 'Nilkanth Arcade, 2nd Floor, Office No. 3, Opp. M.B. College, Mahadev Vadi, Gondal - 360311',
     phone: '+91 9714343087',
     email: 'ak.taxconsultancy86@gmail.com',
-    img: '/images/contact_2.png',
+    img: '/AK_Accounting_Tax_Consultancy/images/contact_2.png',
     wrapperClass: 'mb-30px'
   },
   {
@@ -28,7 +28,7 @@ const locations = [
     address: 'Available for GST, Income Tax & Accounting services across India',
     phone: '+91 9714343087',
     email: 'ak.taxconsultancy86@gmail.com',
-    img: '/images/demo-yoga-and-meditation-contact-03.jpg',
+    img: '/AK_Accounting_Tax_Consultancy/images/demo-yoga-and-meditation-contact-03.jpg',
     wrapperClass: 'md-mb-30px'
   }
 ];
@@ -200,7 +200,7 @@ export const Contact = () => {
       <PageHeader
         title="Contact us"
         subtitle="Grow your business with us"
-        bgImage="/images/demo-it-business-contact-title-bg.jpg"
+        bgImage="/AK_Accounting_Tax_Consultancy/images/demo-it-business-contact-title-bg.jpg"
         animeProps={slideUpAnime}
         colClass="col-12 col-md-6"
         titleClass=""
