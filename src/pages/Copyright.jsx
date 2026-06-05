@@ -10,6 +10,7 @@ export const Copyright = () => {
     <div>
             <PageHeader 
         title="Copyright"
+        subtitle="Information about content ownership and intellectual property rights"
         bgImage="/AK_Accounting_Tax_Consultancy/images/demo-it-business-contact-title-bg.jpg"
         animeProps='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" '
         colClass="col-12 col-md-6"

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { servicesData } from '../../data/servicesData';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,12 +106,16 @@ export const Navbar = () => {
                       aria-expanded={dropdownOpen}
                     ></i>
                     <ul className={`dropdown-menu${dropdownOpen ? ' show' : ''}`}>
-                      <li><Link to="/services/details"><i className="bi bi-briefcase"></i>Data analytics</Link></li>
-                      <li><Link to="/services/details"><i className="bi bi-clipboard-data"></i>Finance consulting</Link></li>
-                      <li><Link to="/services/details"><i className="bi bi-peace"></i>Technology innovation</Link></li>
-                      <li><Link to="/services/details"><i className="bi bi-bar-chart-line"></i>Digital commerce</Link></li>
-                      <li><Link to="/services/details"><i className="bi bi-send-check"></i>Artificial intelligence</Link></li>
-                      <li><Link to="/services/details"><i className="bi bi-globe2"></i>Cloud computing</Link></li>
+                      {servicesData.map((service, index) => {
+                        const icons = ['bi bi-briefcase', 'bi bi-clipboard-data', 'bi bi-building', 'bi bi-journal-text', 'bi bi-shield-check', 'bi bi-people'];
+                        return (
+                          <li key={service.slug}>
+                            <Link to={`/services/${service.slug}`}>
+                              <i className={icons[index % icons.length]}></i>{service.title}
+                            </Link>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </li>
                   <li className="nav-item">
@@ -191,12 +196,16 @@ export const Navbar = () => {
                     onClick={(e) => { e.stopPropagation(); setMobileDropdownOpen(!mobileDropdownOpen); }}
                   ></i>
                   <ul className={`dropdown-menu${mobileDropdownOpen ? ' show' : ''}`}>
-                    <li><Link to="/services/details" onClick={closeMenu}><i className="bi bi-briefcase me-2"></i>Data analytics</Link></li>
-                    <li><Link to="/services/details" onClick={closeMenu}><i className="bi bi-clipboard-data me-2"></i>Finance consulting</Link></li>
-                    <li><Link to="/services/details" onClick={closeMenu}><i className="bi bi-peace me-2"></i>Technology innovation</Link></li>
-                    <li><Link to="/services/details" onClick={closeMenu}><i className="bi bi-bar-chart-line me-2"></i>Digital commerce</Link></li>
-                    <li><Link to="/services/details" onClick={closeMenu}><i className="bi bi-send-check me-2"></i>Artificial intelligence</Link></li>
-                    <li><Link to="/services/details" onClick={closeMenu}><i className="bi bi-globe2 me-2"></i>Cloud computing</Link></li>
+                    {servicesData.map((service, index) => {
+                      const icons = ['bi bi-briefcase', 'bi bi-clipboard-data', 'bi bi-building', 'bi bi-journal-text', 'bi bi-shield-check', 'bi bi-people'];
+                      return (
+                        <li key={service.slug}>
+                          <Link to={`/services/${service.slug}`} onClick={closeMenu}>
+                            <i className={`${icons[index % icons.length]} me-2`}></i>{service.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
                 <li className={`nav-item${isActiveRoute('/case-studies') ? ' active' : ''}`}>

@@ -98,21 +98,20 @@ const testimonials = [
 
 const growthCards = [
   {
-    img: '/AK_Accounting_Tax_Consultancy/images/logo-monday-dark-gray-02.svg',
+    // img: '/AK_Accounting_Tax_Consultancy/images/logo-monday-dark-gray-02.svg',
+    icon: 'bi bi-shield-check',
     title: 'GST & Tax Compliance',
     growth: '98%',
     paddingClass: 'p-15px lg-ps-25px lg-pe-25px md-ps-15px md-pe-15px'
   },
-
   {
-    img: '/AK_Accounting_Tax_Consultancy/images/logo-dropbox-dark-gray-02.svg',
+    icon: 'bi bi-graph-up-arrow',
     title: 'Financial Accuracy',
     growth: '95%',
     paddingClass: 'border-1 border-color-extra-medium-gray p-15px'
   },
-
   {
-    img: '/AK_Accounting_Tax_Consultancy/images/logo-slack-dark-gray-02.svg',
+    icon: 'bi bi-briefcase',
     title: 'Business Growth Support',
     growth: '90%',
     paddingClass: 'border-1 border-color-extra-medium-gray p-15px'
@@ -211,7 +210,13 @@ const PortfolioCard = ({ project, setLightboxImage }) => (
 const GrowthCard = ({ card }) => (
   <div className="col sm-mb-30px">
     <div className="bg-white h-100 border-radius-6px text-center box-shadow-quadruple-large box-shadow-quadruple-large-hover">
-      <div className="pt-10 pb-10"><img src={card.img} className="h-40px md-h-35px sm-h-40px" alt="" /></div>
+      <div className="pt-10 pb-10">
+        {card.icon ? (
+          <i className={`${card.icon} text-gradient-purple-pink text-5xl`}></i>
+        ) : (
+          <img src={card.img} className="h-40px md-h-35px sm-h-40px" alt="" />
+        )}
+      </div>
       <div className={`border-top fs-16 last-paragraph-no-margin ${card.paddingClass}`}>
         <p>{card.title} - <span className="fw-600 text-dark-gray">{card.growth}</span></p>
       </div>
@@ -433,7 +438,7 @@ export const Home = () => {
             <div className="col-xl-10 position-relative">
               <div className="row align-items-center justify-content-center">
                 <div className="col-8 col-md-4 col-sm-6 text-center md-mb-30px">
-                  <img alt="" src={`/images/demo-it-business-testimonials-0${activeTestimonial + 1}.png`} />
+                  <img alt="" src={`/AK_Accounting_Tax_Consultancy/images/demo-it-business-testimonials-0${activeTestimonial + 1}.png`} />
                 </div>
                 <div className="col-lg-5 col-md-7 last-paragraph-no-margin text-center text-md-start">
                   <a href="#" className="mb-15px d-block">
