@@ -149,6 +149,7 @@ export const Navbar = () => {
           ============================================================ */}
       <div
         className="navbar-full-screen-menu-inner"
+        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
       >
         {/* Close (X) button inside overlay */}
         <button

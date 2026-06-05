@@ -101,7 +101,11 @@ const LocationCard = ({ location }) => (
 const ContactInfoItem = ({ method }) => (
   <div className={`col last-paragraph-no-margin ${method.mbClass}`}>
     <p>{method.title}</p>
-    <a href={method.href} className="text-dark-gray fw-600">{method.value}</a>
+    {method.href ? (
+      <a href={method.href} className="text-dark-gray fw-600">{method.value}</a>
+    ) : (
+      <span className="text-dark-gray fw-600">{method.value}</span>
+    )}
   </div>
 );
 
@@ -111,7 +115,7 @@ const FormField = ({ field, value, touched, error, onChange, onBlur }) => {
 
   return (
     <>
-      <label className="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">{field.label}</label>
+      <label htmlFor={field.name} className="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">{field.label}</label>
       <div className={`position-relative form-group ${field.type === 'textarea' ? 'form-textarea mb-0' : 'mb-30px'}`}>
         {(!touched || error || field.type === 'textarea') && (
           <span className="form-icon">
@@ -121,6 +125,7 @@ const FormField = ({ field, value, touched, error, onChange, onBlur }) => {
 
         {field.type === 'textarea' ? (
           <textarea
+            id={field.name}
             className={`fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control ${isValid ? 'input-valid' : ''}`}
             name={field.name}
             placeholder={field.placeholder}
@@ -131,6 +136,7 @@ const FormField = ({ field, value, touched, error, onChange, onBlur }) => {
           ></textarea>
         ) : (
           <input
+            id={field.name}
             className={`fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control ${field.required ? 'required' : ''} ${isInvalid ? 'input-invalid' : ''} ${isValid ? 'input-valid' : ''}`}
             type={field.type}
             name={field.name}
