@@ -1,0 +1,389 @@
+/* ==========================================================================
+   React Conversion — globals.css
+   Tailwind v4 coexistence with Bootstrap + original template CSS.
+   This file is imported LAST in main.jsx so its rules have highest priority.
+   ========================================================================== */
+
+/* Tailwind v4 base layer — imported after Bootstrap so preflight only
+   supplements Bootstrap rather than fighting it. */
+@import "tailwindcss";
+
+/* ==========================================================================
+   GLOBAL CUSTOM SCROLLBAR
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; /* sleek gray */
+  border-radius: 10px;
+  border: 2px solid #f8f9fa; /* padding effect */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af; /* slightly darker on hover */
+}
+
+/* ==========================================================================
+   1. NAVBAR — Desktop collapse always visible; mobile only when .show
+   ========================================================================== */
+
+/* Desktop (≥992px): force navbar-collapse visible regardless of Tailwind reset */
+@media (min-width: 992px) {
+  .navbar .navbar-collapse {
+    display: flex !important;
+    visibility: visible !important;
+    flex-basis: auto;
+  }
+}
+
+/* Mobile (<992px): hide collapse unless .show is present */
+@media (max-width: 991.98px) {
+  .navbar .collapse:not(.show) {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   2. MOBILE FULL-SCREEN MENU OVERLAY
+   The template uses data-mobile-nav-style="full-screen-menu" on <body>.
+   Aligning layout elements with original template classes.
+   ========================================================================== */
+
+/* Raise header z-index when menu is open to ensure the close button is visible and overlays the screen */
+body.navbar-collapse-show header {
+  z-index: 10002 !important;
+}
+
+/* Ensure original transitions and visibility are unaffected by Tailwind or local overrides */
+.navbar-full-screen-menu-inner {
+  z-index: 10001 !important;
+  background-image: none !important;
+  background-color: #252840 !important;
+}
+
+/* ==========================================================================
+   3. BACKGROUND IMAGE FIX
+   Tailwind preflight resets background-size/position. The template's
+   .cover-background sets background via inline style, ensure it prevails.
+   ========================================================================== */
+.cover-background {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ==========================================================================
+   4. IMAGE DISPLAY FIX
+   Tailwind preflight sets img { display: block } which breaks inline logo
+   placement in navbar and footer.
+   ========================================================================== */
+.navbar-brand img,
+footer img,
+.footer-logo img {
+  display: inline-block;
+}
+
+/* ==========================================================================
+   5. LIST RESET FIX
+   Tailwind removes list-style; footer and nav ul need explicit reset.
+   ========================================================================== */
+footer ul,
+.footer-navbar,
+.navbar-full-screen-menu-inner .navbar-nav {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* ==========================================================================
+   6. ANIMATION VISIBILITY FALLBACK
+   The template jQuery sets opacity: 0 on data-anime elements then animates
+   to 1 via IntersectionObserver/appear. If scripts haven't fired yet on
+   initial render, elements must remain visible to avoid blank sections.
+   The anime.js engine will override opacity when it fires.
+   ========================================================================== */
+[data-anime]:not(.appear):not(.anime-complete) {
+  opacity: 1 !important;
+}
+
+/* ==========================================================================
+   7. CUSTOM CURSOR
+   The magic-cursor from the template is controlled by our React
+   CustomCursor component. These rules ensure correct z-index layering.
+   ========================================================================== */
+#cursor-page-outer,
+#cursor-page-inner {
+  pointer-events: none;
+  z-index: 99999;
+}
+
+/* Keep system cursor visible */
+@media (pointer: fine) {
+  html, body, * {
+    cursor: auto !important;
+  }
+}
+
+/* Show system cursor on touch devices — hide custom cursor */
+@media (pointer: coarse) {
+  #cursor-page-outer,
+  #cursor-page-inner {
+    display: none !important;
+  }
+  html, body, * {
+    cursor: auto !important;
+  }
+}
+
+/* ==========================================================================
+   8. ICON FONT OVERRIDES
+   CDN-loaded icon fonts (Bootstrap Icons, Font Awesome) sometimes conflict
+   with the bundled icon.min.css @font-face rules. CDN versions take priority.
+   ========================================================================== */
+
+/* Ensure Bootstrap Icons from CDN take priority over bundled version */
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  font-family: "bootstrap-icons" !important;
+}
+
+/* Ensure Font Awesome from CDN takes priority */
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+}
+
+/* ==========================================================================
+   9. MOBILE FULL SCREEN MENU LINK VISIBILITY AND ANIMATION
+   Ensures the mobile menu items are fully visible and transitioned when open,
+   while preserving the native staggered transition delay animations.
+   ========================================================================== */
+/* Ensure mobile scroll containers do not collapse and are centered */
+.navbar-full-screen-menu-inner .navbar-collapse-clone {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  visibility: inherit !important;
+}
+
+body.navbar-collapse-show .navbar-full-screen-menu-inner {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body.navbar-collapse-show .navbar-full-screen-menu-inner .mCustomScrollBox,
+body.navbar-collapse-show .navbar-full-screen-menu-inner .mCSB_container,
+body.navbar-collapse-show .navbar-full-screen-menu-inner .navbar-collapse-clone,
+body.navbar-collapse-show .navbar-full-screen-menu-inner .navbar-nav,
+body.navbar-collapse-show .navbar-full-screen-menu-inner .text-center {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+body.navbar-collapse-show .navbar-full-screen-menu-inner .navbar-nav > .nav-item {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scale(1) translateY(0) !important;
+  -webkit-transform: scale(1) translateY(0) !important;
+}
+
+/* Ensure mobile menu links, carets, and close button lines are solid white for readability */
+.navbar-full-screen-menu-inner .navbar-nav .nav-item .nav-link,
+.navbar-full-screen-menu-inner .navbar-nav .nav-item .dropdown-toggle {
+  color: #ffffff !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.navbar-full-screen-menu-inner .navbar-toggler-clone .navbar-toggler-line {
+  background-color: #ffffff !important;
+}
+
+/* Ensure mobile scroll containers do not collapse and are centered */
+.navbar-full-screen-menu-inner .navbar-collapse-clone {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.navbar-full-screen-menu-inner .mCustomScrollBox {
+  display: block !important;
+  height: 100% !important;
+  width: 85% !important;
+  margin: 0 auto !important;
+  overflow-y: auto !important;
+}
+
+/* Custom Scrollbar to mimic mCustomScrollbar (mCS-light) natively */
+.navbar-full-screen-menu-inner .mCustomScrollBox::-webkit-scrollbar {
+  width: 6px;
+}
+
+.navbar-full-screen-menu-inner .mCustomScrollBox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navbar-full-screen-menu-inner .mCustomScrollBox::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+}
+
+.navbar-full-screen-menu-inner .mCustomScrollBox::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-full-screen-menu-inner .mCSB_container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  min-height: 100% !important;
+  width: 100% !important;
+  padding: 40px 0 !important;
+}
+
+.navbar-full-screen-menu-inner .navbar-nav {
+  width: 100% !important;
+  align-items: stretch !important;
+}
+
+.navbar-full-screen-menu-inner .navbar-nav .nav-item {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* ==========================================================================
+   10. ISOTOPE GRID REPLACEMENT & Z-INDEX FIXES
+   ========================================================================== */
+
+/* Ensure header always stays above page content (portfolio images) */
+header {
+  z-index: 9999 !important;
+  position: relative;
+}
+
+/* Fallback for Isotope.js Grid layout in React */
+ul.grid.portfolio-modern {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  list-style: none;
+  padding: 0;
+  margin: 0 -15px; /* Offset the gutter-extra-large padding */
+}
+
+ul.grid.portfolio-modern li.grid-item {
+  position: relative !important;
+  float: none !important;
+  /* width is already correctly assigned by .grid-3col in style.css */
+}
+
+/* Form Validation Effects */
+@keyframes shake-animation {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.input-invalid {
+  border-color: #ef4444 !important;
+  animation: shake-animation 0.5s ease-in-out;
+}
+
+.input-valid {
+  border-color: #22c55e !important;
+  transition: all 0.3s ease;
+}
+
+.validation-message {
+  font-size: 12px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  animation: slide-down 0.3s ease-out;
+}
+
+.validation-message.error {
+  color: #ef4444;
+}
+
+.validation-message.success {
+  color: #22c55e;
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.valid-indicator {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #22c55e;
+  animation: scale-in 0.3s ease-out;
+}
+
+@keyframes scale-in {
+  from { transform: translateY(-50%) scale(0); opacity: 0; }
+  to { transform: translateY(-50%) scale(1); opacity: 1; }
+}
+
+
+/* Glassmorphism Success Card */
+.glass-success-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  padding: 40px !important;
+  border-radius: 16px !important;
+  animation: slide-up-fade 0.5s ease-out;
+}
+
+@keyframes slide-up-fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success-icon-anim {
+  animation: pop-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+@keyframes pop-in {
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* Increase Logo Size in Header and Footer */
+header .navbar-brand img {
+  max-height: 250px !important;
+  width: auto !important;
+}
+
+.left-modern-menu .left-modern-header .navbar-brand img {
+  max-height: 250px !important;
+  width: auto !important;
+}
+
+footer .footer-logo img {
+  max-height: 80px !important;
+  width: auto !important;
+}
+

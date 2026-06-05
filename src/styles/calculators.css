@@ -1,0 +1,89 @@
+/* Calculator Custom Styles */
+
+.calculator-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  padding: 30px;
+}
+
+
+/* Pill Buttons */
+.calc-pill-btn {
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
+  color: #495057;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.calc-pill-btn:hover {
+  background: #e9ecef;
+}
+
+.calc-pill-btn.active {
+  background: var(--base-color);
+  border-color: var(--base-color);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(var(--base-color-rgb), 0.3);
+}
+
+/* Tab Toggles */
+.calc-tab-toggle {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 6px;
+  display: flex;
+}
+
+.calc-tab-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.calc-tab-btn.active {
+  background: #fff;
+  color: var(--base-color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Result Cards */
+.result-card {
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.result-card.blue { background-color: rgba(66, 133, 244, 0.08); }
+.result-card.orange { background-color: rgba(251, 140, 0, 0.08); }
+.result-card.green { background-color: rgba(52, 168, 83, 0.08); }
+
+.amount-input-group {
+  position: relative;
+}
+
+.amount-input-group .prefix {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.amount-input-group input {
+  padding-left: 35px;
+  font-size: 20px;
+  font-weight: 600;
+  height: 60px;
+  border-radius: 8px;
+}
