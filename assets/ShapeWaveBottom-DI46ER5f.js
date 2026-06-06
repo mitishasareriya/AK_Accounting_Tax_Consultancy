@@ -1,3 +1,0 @@
-import{n as e,s as t}from"./index-BWpqHxU6.js";t();var n=e(),r=({fillColor:e=`#ffffff`,className:t=`bottom-0 absolute`})=>(0,n.jsx)(`div`,{className:`shape-image-animation p-0 w-100 d-none d-md-block ${t}`,children:(0,n.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`3000`,height:`400`,viewBox:`0 180 2500 200`,fill:e,children:(0,n.jsx)(`path`,{className:`st1`,d:`M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250`,children:(0,n.jsx)(`animate`,{attributeName:`d`,dur:`5s`,values:`M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250;
-                    M 0 250 C 400 50 400 400 3000 250 L 3000 550 L 0 550 L 0 250;
-                    M 0 250 C 1200 400 1200 50 3000 250 L 3000 550 L 0 550 L 0 250`,repeatCount:`indefinite`})})})});export{r as t};
