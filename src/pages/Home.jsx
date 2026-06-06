@@ -291,7 +291,7 @@ export const Home = () => {
         schema={homeSchema}
       />
       {/* 1. HERO SECTION */}
-      <section className="cover-background full-screen ipad-top-space-margin py-0 md-h-750px sm-h-650px" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-banner-bg_1.png')` }}>
+      <section className="cover-background full-screen py-0 md-h-750px sm-h-650px" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-banner-bg_1.png')` }}>
         <div className="opacity-very-light bg-black"></div>
         <ShapeWaveBottom />
         <div className="container h-100">

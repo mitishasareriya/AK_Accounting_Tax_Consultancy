@@ -55,27 +55,27 @@ export const Navbar = () => {
 
   return (
     <>
-      <header className={`${sticky ? 'sticky' : ''} ${stickyActive ? 'sticky-active' : ''}`}>
+      <header className={`${sticky ? 'sticky' : ''} ${stickyActive ? 'sticky-active' : ''} !p-0 !m-0`}>
         {/* start navigation */}
         <nav
-          className="navbar navbar-expand-lg header-transparent bg-transparent header-reverse glass-effect"
+          className="navbar navbar-expand-lg header-transparent bg-transparent header-reverse glass-effect !py-1 !min-h-[60px]"
           data-header-hover="light"
         >
-          <div className="container-fluid">
+          <div className="container-fluid !py-0 !my-0 items-center">
             {/* Logo */}
             <div className="col-auto col-xxl-3 col-lg-2 me-lg-0 me-auto">
-              <Link className="navbar-brand" to="/">
+              <Link className="navbar-brand !py-1 !my-0 flex items-center" to="/" style={{ paddingTop: '5px', paddingBottom: '5px' }}>
                 <img src="/AK_Accounting_Tax_Consultancy/images/logo_400_120.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-white@2x.png" alt="Crafto" className="default-logo" />
                 <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-black@2x.png" alt="Crafto" className="alt-logo" />
-                <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical_3.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-black@2x.png" alt="Crafto" className="mobile-logo" style={{ maxHeight: '250px' }} />
+                <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical_3.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-black@2x.png" alt="Crafto" className="mobile-logo" style={{ height: '45px', width: 'auto', objectFit: 'contain' }} />
               </Link>
             </div>
 
             {/* Desktop nav + hamburger toggle */}
-            <div className="col-auto col-xxl-6 col-lg-8 menu-order position-static">
+            <div className="col-auto col-xxl-6 col-lg-8 menu-order position-static flex items-center">
               {/* Hamburger button — visible on mobile only (< lg) */}
               <button
-                className={`navbar-toggler float-start${isOpen ? '' : ' collapsed'}`}
+                className={`navbar-toggler float-start !my-0 !py-2 ${isOpen ? '' : ' collapsed'}`}
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-controls="navbarNav"
@@ -135,12 +135,10 @@ export const Navbar = () => {
             </div>
 
             {/* CTA button — desktop only */}
-            <div className="col-auto col-xxl-3 col-lg-2 text-end d-none d-sm-flex">
-              <div className="header-icon">
-                <div className="header-button">
-                  <Link to="/contact" className="btn btn-large btn-transparent-white-light btn-rounded text-transform-none border-1">
-                    Get free consultation<i className="fa-solid fa-arrow-right"></i>
-                  </Link>
+            <div className="col-auto col-xxl-3 col-lg-2 text-end d-none d-sm-flex !py-0 !my-0 items-center">
+              <div className="header-icon !py-0 !my-0">
+                <div className="header-button !py-0 !my-0">
+                  <Link to="/contact" className="btn btn-large btn-transparent-white-light btn-rounded text-transform-none border-1 text-nowrap">Get free consultation<i className="fa-solid fa-arrow-right"></i></Link>
                 </div>
               </div>
             </div>
@@ -224,9 +222,7 @@ export const Navbar = () => {
 
               {/* Get free consultation button inside overlay */}
               <div className="text-center mt-5">
-                <Link to="/contact" onClick={closeMenu} className="btn btn-large btn-transparent-white-light btn-rounded text-transform-none border-1">
-                  Get free consultation<i className="fa-solid fa-arrow-right"></i>
-                </Link>
+                <Link to="/contact" onClick={closeMenu} className="btn btn-large btn-transparent-white-light btn-rounded text-transform-none border-1 text-nowrap">Get free consultation<i className="fa-solid fa-arrow-right"></i></Link>
               </div>
             </div>
           </div>
