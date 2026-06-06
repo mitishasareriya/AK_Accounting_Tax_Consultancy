@@ -10,10 +10,13 @@ export const CaseStudies = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [lightboxImage, setLightboxImage] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
 
   const projectsList = projectsData;
 
   useEffect(() => {
+    setCurrentPage(1);
     if (activeCategory === 'all') {
       setFilteredProjects(projectsList);
     } else {
@@ -22,7 +25,10 @@ export const CaseStudies = () => {
       );
       setFilteredProjects(filtered);
     }
-  }, [activeCategory]);
+  }, [activeCategory, projectsList]);
+
+  const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+  const currentProjects = filteredProjects.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
     <div>
@@ -61,7 +67,7 @@ export const CaseStudies = () => {
           <div className="row mb-8 sm-mb-0" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
             <div className="col-12 filter-content p-md-0">
               <ul className="portfolio-modern portfolio-wrapper d-flex flex-wrap grid grid-3col xxl-grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large">
-                {filteredProjects.map((project) => (
+                {currentProjects.map((project) => (
                   <li key={project.id} className="grid-item transition-inner-all">
                     <a href={project.img} onClick={(e) => { e.preventDefault(); setLightboxImage(project); }} title={project.title}>
                       <div className="portfolio-box">
@@ -84,6 +90,23 @@ export const CaseStudies = () => {
               </ul>
             </div>
           </div> 
+          
+          {/* start pagination */}
+          {totalPages > 1 && (
+            <div className="row">
+              <div className="col-12 mt-5 mb-5 d-flex justify-content-center" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <ul className="pagination pagination-style-01 fs-13 fw-500 mb-0">
+                  <li className="page-item"><a className="page-link" href="#" onClick={e => { e.preventDefault(); if(currentPage > 1) setCurrentPage(currentPage - 1); }}><i className="bi bi-arrow-left fs-18 d-xs-none"></i></a></li>
+                  {Array.from({ length: totalPages }).map((_, index) => (
+                    <li key={index} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
+                      <a className="page-link" href="#" onClick={e => { e.preventDefault(); setCurrentPage(index + 1); }}>{String(index + 1).padStart(2, '0')}</a>
+                    </li>
+                  ))}
+                  <li className="page-item"><a className="page-link" href="#" onClick={e => { e.preventDefault(); if(currentPage < totalPages) setCurrentPage(currentPage + 1); }}><i className="bi bi-arrow-right fs-18 d-xs-none"></i></a></li>
+                </ul>
+              </div> 
+            </div>
+          )}
         </div>
         <ShapeWaveBottom className="bottom-minus-40px xl-bottom-0px absolute" />
       </section>

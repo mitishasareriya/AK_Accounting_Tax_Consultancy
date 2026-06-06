@@ -1,0 +1,171 @@
+export const blogData = [
+  {
+    id: 1,
+    slug: "navigating-gst-amendments-2024",
+    title: "Navigating the new GST amendments in 2024",
+    shortDescription: "Stay informed about the latest regulatory shifts and how they impact your business returns.",
+    category: "GST Updates",
+    author: "Admin Team",
+    publishDate: "12 October 2024",
+    heroImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-img-02.jpg",
+    cardImage: "/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-01.jpg",
+    shares: 25,
+    quote: {
+      text: "Financial accuracy isn't just about compliance; it's about giving you the clarity to make bold business decisions.",
+      author: "AK Accounting & Tax Consultancy"
+    },
+    tags: ["Taxation", "Auditing", "Compliance", "GST"],
+    content: [
+      {
+        type: "paragraph",
+        dropcap: true,
+        text: "Expert financial planning is the cornerstone of business growth. In today's dynamic economic landscape, businesses require agile and compliant accounting practices to thrive. By implementing advanced tax strategies and maintaining robust audit readiness, companies can mitigate risks and unlock new avenues for expansion."
+      },
+      {
+        type: "heading",
+        text: "Preparing for the Future of Corporate Taxation"
+      },
+      {
+        type: "paragraph",
+        text: "As regulatory frameworks evolve, businesses must stay ahead of the curve. Comprehensive GST management, meticulous bookkeeping, and proactive auditing ensure that your enterprise remains resilient against financial discrepancies. Our dedicated team specializes in transforming complex financial data into actionable insights, empowering stakeholders to drive sustainable success."
+      },
+      {
+        type: "heading",
+        text: "The Value of Professional Bookkeeping"
+      },
+      {
+        type: "paragraph",
+        text: "Accurate bookkeeping goes beyond recording transactions; it provides a real-time snapshot of your company's fiscal health. We streamline your accounts payable and receivable, optimize cash flow, and ensure that every financial statement reflects the true operational reality of your business."
+      },
+      {
+        type: "heading",
+        text: "Audit Readiness at All Times"
+      },
+      {
+        type: "paragraph",
+        text: "An unexpected audit shouldn't cause panic. By maintaining organized, transparent, and strictly compliant financial records, we guarantee that your business is always prepared for internal and external reviews."
+      }
+    ],
+    gallery: [
+      "/AK_Accounting_Tax_Consultancy/images/demo-accounting-blog-01.jpg",
+      "/AK_Accounting_Tax_Consultancy/images/demo-accounting-blog-03.jpg"
+    ],
+    bannerImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-company-01.jpg",
+    relatedBlogs: ["internal-audit-practices", "corporate-tax-planning"]
+  },
+  {
+    id: 2,
+    slug: "internal-audit-practices",
+    title: "5 internal audit practices that save millions",
+    shortDescription: "Discover how robust internal auditing frameworks prevent fraud and optimize operational efficiency.",
+    category: "Audit",
+    author: "Admin Team",
+    publishDate: "05 September 2024",
+    heroImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-img-02.jpg",
+    cardImage: "/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-02.jpg",
+    shares: 58,
+    quote: {
+      text: "A successful audit is not about finding errors, but establishing a framework for financial excellence.",
+      author: "AK Accounting & Tax Consultancy"
+    },
+    tags: ["Audit", "Finance", "Strategy"],
+    content: [
+      {
+        type: "paragraph",
+        dropcap: true,
+        text: "Robust internal auditing is a necessity for any scaling business. Without proper checks and balances, even minor discrepancies can snowball into multi-million dollar liabilities. Establishing proactive audit trails safeguards your assets and guarantees operational efficiency."
+      },
+      {
+        type: "heading",
+        text: "Identifying Operational Inefficiencies"
+      },
+      {
+        type: "paragraph",
+        text: "An effective internal audit does more than review numbers; it maps out workflows to identify bottlenecks and redundancies. By continuously monitoring these processes, companies can trim excess costs and dramatically improve their profit margins."
+      }
+    ],
+    gallery: [
+      "/AK_Accounting_Tax_Consultancy/images/demo-accounting-blog-03.jpg"
+    ],
+    bannerImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-company-01.jpg",
+    relatedBlogs: ["navigating-gst-amendments-2024", "corporate-tax-planning"]
+  },
+  {
+    id: 3,
+    slug: "corporate-tax-planning",
+    title: "Corporate tax planning strategies for startups",
+    shortDescription: "Learn the legal tax deferral and deduction strategies that accelerate early-stage startup growth.",
+    category: "Tax",
+    author: "Admin Team",
+    publishDate: "22 August 2024",
+    heroImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-img-02.jpg",
+    cardImage: "/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-03.jpg",
+    shares: 75,
+    quote: {
+      text: "Smart tax planning gives startups the runway they need to innovate without financial friction.",
+      author: "AK Accounting & Tax Consultancy"
+    },
+    tags: ["Taxation", "Startups", "Growth"],
+    content: [
+      {
+        type: "paragraph",
+        dropcap: true,
+        text: "Startups often focus heavily on product development and customer acquisition, inadvertently sidelining tax planning. However, understanding early-stage deductions, R&D credits, and legal deferrals can significantly extend a startup's runway and fuel faster innovation."
+      },
+      {
+        type: "heading",
+        text: "Leveraging Government Incentives"
+      },
+      {
+        type: "paragraph",
+        text: "Many new businesses fail to claim the government incentives available to them. From employment generation subsidies to specialized sector grants, our strategic consultancy ensures you never leave money on the table."
+      }
+    ],
+    gallery: [
+      "/AK_Accounting_Tax_Consultancy/images/demo-accounting-blog-01.jpg",
+      "/AK_Accounting_Tax_Consultancy/images/demo-accounting-blog-03.jpg",
+      "/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-01.jpg"
+    ],
+    bannerImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-company-01.jpg",
+    relatedBlogs: ["navigating-gst-amendments-2024", "internal-audit-practices"]
+  },
+  {
+    id: 4,
+    slug: "streamlining-payroll-management",
+    title: "Streamlining payroll management for growing SMEs",
+    shortDescription: "Simplify employee compensation, PF, and ESIC compliance with expert payroll strategies.",
+    category: "Payroll",
+    author: "Admin Team",
+    publishDate: "10 August 2024",
+    heroImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-img-02.jpg",
+    cardImage: "/AK_Accounting_Tax_Consultancy/images/demo-corporate-blog-04.jpg",
+    shares: 42,
+    quote: {
+      text: "A seamless payroll system isn't just about compliance; it's about building trust with your workforce.",
+      author: "AK Accounting & Tax Consultancy"
+    },
+    tags: ["Payroll", "HR Compliance", "SME"],
+    content: [
+      {
+        type: "paragraph",
+        dropcap: true,
+        text: "Managing payroll internally can quickly become a logistical nightmare for growing enterprises. The complexities of PF, ESIC, professional taxes, and dynamic salary restructuring require specialized attention to avoid legal penalties and employee dissatisfaction."
+      },
+      {
+        type: "heading",
+        text: "The Benefits of Outsourced Payroll"
+      },
+      {
+        type: "paragraph",
+        text: "By outsourcing payroll, SMEs can eliminate administrative overhead and focus on core business activities. Advanced payroll systems ensure accurate tax withholdings, timely disbursals, and complete adherence to shifting labor laws."
+      }
+    ],
+    gallery: [
+      "/AK_Accounting_Tax_Consultancy/images/demo-accounting-blog-03.jpg"
+    ],
+    bannerImage: "/AK_Accounting_Tax_Consultancy/images/demo-accounting-company-01.jpg",
+    relatedBlogs: ["navigating-gst-amendments-2024", "corporate-tax-planning"]
+  }
+];
+
+export default blogData;

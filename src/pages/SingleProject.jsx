@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAnime } from '../hooks/useAnime';
 import { ShapeWaveBottom } from '../components/common/ShapeWaveBottom';
 import { PageHeader } from '../components/common/PageHeader';
+import { handleShare } from '../utils/share';
 
 export const SingleProject = () => {
   useAnime();
@@ -150,10 +151,11 @@ export const SingleProject = () => {
             <div className="col-12 col-lg-2 col-md-2"><div className="w-100 h-1px bg-extra-medium-gray sm:hidden"></div></div>
             <div className="col-12 col-lg-4 col-md-5 text-center text-md-start elements-social social-icon-style-02">
               <ul className="medium-icon dark mb-0 flex justify-center md:justify-start gap-4">
+                <li><a className="share-btn text-dark-gray hover:text-red-600 fs-18" href="#" onClick={(e) => handleShare(e, "AK Accounting Portfolio")}><i className="fa-solid fa-share-nodes text-red"></i></a></li>
                 <li><a className="facebook text-dark-gray hover:text-blue-600 fs-18" href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i></a></li>
                 <li><a className="twitter text-dark-gray hover:text-sky-500 fs-18" href="https://www.twitter.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-twitter"></i></a></li> 
                 <li><a className="linkedin text-dark-gray hover:text-blue-700 fs-18" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a></li> 
-                <li><a className="pinterest text-dark-gray hover:text-red-600 fs-18" href="https://www.pinterest.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-pinterest-p"></i></a></li>
+                <li><a className="whatsapp text-dark-gray hover:text-green-600 fs-18" href="https://api.whatsapp.com/send?text=Check out this project by AK Accounting" target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp"></i></a></li>
               </ul>
             </div>
           </div>

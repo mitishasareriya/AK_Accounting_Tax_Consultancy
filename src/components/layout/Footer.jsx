@@ -32,7 +32,9 @@ export const Footer = () => {
             <ul>
               <li><Link to="/about">Who we are</Link></li>
               <li><Link to="/services">Our services</Link><div className="bg-dark-gray fw-600 text-white lh-22 text-uppercase border-radius-30px ps-10px pe-10px fs-10 ms-10px d-inline-block align-middle">Hot</div></li>
-              <li><Link to="/case-studies">Our clients</Link></li>
+              <li><Link to="/case-studies">Case Studies</Link></li>
+              <li><Link to="/financial-calculators">Calculators</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact">Contact us</Link></li>
             </ul>
           </div>

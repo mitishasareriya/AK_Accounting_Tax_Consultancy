@@ -330,10 +330,10 @@ export const Home = () => {
           <div className="row mb-10 align-items-center">
             <div className="col-lg-5 position-relative md-mb-20">
               <div className="w-70 xs-w-80">
-                <img src="/AK_Accounting_Tax_Consultancy/images/demo-it-business-01.jpg" alt="" className="border-radius-8px w-100" />
+                <img src="/AK_Accounting_Tax_Consultancy/images/demo-accounting-img-02.jpg" alt="" className="border-radius-8px w-100" />
               </div>
               <div className="w-60 overflow-hidden position-absolute right-minus-15px xs-right-15px xs-w-60 bottom-minus-50px">
-                <img src="/AK_Accounting_Tax_Consultancy/images/demo-it-business-02.jpg" alt="" className="border-radius-8px w-100 box-shadow-quadruple-large" />
+                <img src="/AK_Accounting_Tax_Consultancy/images/demo-accounting-company-01.jpg" alt="" className="border-radius-8px w-100 box-shadow-quadruple-large" />
               </div>
             </div>
             <div className="col-xl-5 col-lg-6 offset-lg-1" data-anime={slideAnime}>

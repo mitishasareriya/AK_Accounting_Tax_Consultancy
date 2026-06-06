@@ -1,11 +1,18 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAnime } from '../hooks/useAnime';
 import { ShapeWaveBottom } from '../components/common/ShapeWaveBottom';
 import { PageHeader } from '../components/common/PageHeader';
 import { calculatorsData } from '../data/calculatorsData';
+import { handleShare } from '../utils/share';
 
 export const FinancialCalculators = () => {
   useAnime();
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
+
+  const totalPages = Math.ceil(calculatorsData.length / itemsPerPage);
+  const currentCalculators = calculatorsData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
     <div>
@@ -23,7 +30,7 @@ export const FinancialCalculators = () => {
       <section className="pt-3 bg-very-light-gray sm-pt-50px position-relative pb-12">
         <div className="container">
           <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-8" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-            {calculatorsData.map((calc, index) => (
+            {currentCalculators.map((calc, index) => (
               <div key={index} className="col mb-30px">
                 <div className="services-box-style-03 h-100 d-flex flex-column box-shadow-extra-large last-paragraph-no-margin border-radius-6px overflow-hidden bg-white">
                   <div className="position-relative p-4 pb-0 text-center">
@@ -51,17 +58,35 @@ export const FinancialCalculators = () => {
               </div>
             ))}
           </div>
+          
+          {/* start pagination */}
+          {totalPages > 1 && (
+            <div className="row">
+              <div className="col-12 mt-5 mb-5 d-flex justify-content-center" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                <ul className="pagination pagination-style-01 fs-13 fw-500 mb-0">
+                  <li className="page-item"><a className="page-link" href="#" onClick={e => { e.preventDefault(); if(currentPage > 1) setCurrentPage(currentPage - 1); }}><i className="bi bi-arrow-left fs-18 d-xs-none"></i></a></li>
+                  {Array.from({ length: totalPages }).map((_, index) => (
+                    <li key={index} className={`page-item ${currentPage === index + 1 ? 'active' : ''}`}>
+                      <a className="page-link" href="#" onClick={e => { e.preventDefault(); setCurrentPage(index + 1); }}>{String(index + 1).padStart(2, '0')}</a>
+                    </li>
+                  ))}
+                  <li className="page-item"><a className="page-link" href="#" onClick={e => { e.preventDefault(); if(currentPage < totalPages) setCurrentPage(currentPage + 1); }}><i className="bi bi-arrow-right fs-18 d-xs-none"></i></a></li>
+                </ul>
+              </div> 
+            </div>
+          )}
         </div>
-        <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 col-lg-4 col-md-5 alt-font text-dark-gray text-center text-md-end fw-500 text-uppercase">Share this project</div>
-                    <div class="col-12 col-lg-2 col-md-2"><div class="w-100 h-1px bg-extra-medium-gray sm-mt-15px sm-mb-3px"></div></div>
-                    <div class="col-12 col-lg-4 col-md-5 text-center text-md-start elements-social social-icon-style-02">
-                        <ul class="medium-icon dark mb-0">
-                            <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a class="twitter" href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li> 
-                            <li><a class="linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li> 
-                            <li><a class="pinterest" href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a></li>
+        <div className="container">
+                <div className="row align-items-center justify-content-center">
+                    <div className="col-12 col-lg-4 col-md-5 alt-font text-dark-gray text-center text-md-end fw-500 text-uppercase">Share this Financial Calculators</div>
+                    <div className="col-12 col-lg-2 col-md-2"><div className="w-100 h-1px bg-extra-medium-gray sm-mt-15px sm-mb-3px"></div></div>
+                    <div className="col-12 col-lg-4 col-md-5 text-center text-md-start elements-social social-icon-style-02">
+                        <ul className="medium-icon dark mb-0">
+                            <li><a className="share-btn" href="#" onClick={(e) => handleShare(e, "AK Accounting Financial Calculators")}><i className="fa-solid fa-share-nodes text-red"></i></a></li>
+                            <li><a className="facebook" href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a className="twitter" href="https://www.twitter.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-twitter"></i></a></li> 
+                            <li><a className="linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a></li> 
+                            <li><a className="whatsapp" href="https://api.whatsapp.com/send?text=Check out AK Accounting Financial Calculators" target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
                 </div>

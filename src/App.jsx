@@ -65,7 +65,7 @@ function App() {
               <Route path="/case-studies"   element={<CaseStudies />} />
               <Route path="/portfolio/details" element={<SingleProject />} />
               <Route path="/blog"           element={<Blog />} />
-              <Route path="/blog/details"   element={<BlogDetails />} />
+              <Route path="/blog/:slug"     element={<BlogDetails />} />
               <Route path="/contact"        element={<Contact />} />
               <Route path="/privacy"        element={<PrivacyPolicy />} />
               <Route path="/terms"          element={<TermsConditions />} />
