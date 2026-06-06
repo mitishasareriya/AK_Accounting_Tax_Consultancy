@@ -19,7 +19,7 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <section className="cover-background full-screen ipad-top-space-margin md-h-550px" style={{ backgroundImage: "url('/AK_Accounting_Tax_Consultancy/images/404-bg.jpg')" }}>
+        <section className="cover-background full-screen md-h-550px" style={{ backgroundImage: "url('/AK_Accounting_Tax_Consultancy/images/404-bg.jpg')" }}>
           <div className="container h-100">
               <div className="row align-items-center justify-content-center h-100">
                   <div className="col-12 col-xl-6 col-lg-7 col-md-9 text-center">

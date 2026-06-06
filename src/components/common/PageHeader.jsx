@@ -13,7 +13,7 @@ export const PageHeader = ({
 }) => {
   return (
     <section 
-      className="pt-0 cover-background ipad-top-space-margin sm-pb-0 bg-cover bg-center relative" 
+      className="pt-0 cover-background sm-pb-0 bg-cover bg-center relative" 
       style={{ backgroundImage: `url('${bgImage}')` }}
     >
       <ShapeWaveBottom className="bottom-0 absolute" />
