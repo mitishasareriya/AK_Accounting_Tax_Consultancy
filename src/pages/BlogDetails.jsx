@@ -155,11 +155,11 @@ export const BlogDetails = () => {
               
               <div className="row justify-content-center">
                 <div className="col-12 text-center elements-social social-icon-style-04">
-                  <ul className="medium-icon dark">
-                    <li><a className="share-btn" href="#" onClick={(e) => handleShare(e, blog.title)}><i className="fa-solid fa-share-nodes text-red"></i><span>Share</span></a></li>
-                    <li><a className="facebook" href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i><span></span></a></li>
-                    <li><a className="twitter" href="https://www.twitter.com" target="_blank" rel="noreferrer"><i className="fa-brands fa-twitter"></i><span></span></a></li>
-                    <li><a className="linkedin" href="http://www.linkedin.com" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i><span></span></a></li> 
+                  <ul className="medium-icon dark d-flex justify-content-center gap-3 flex-wrap">
+                    <li><a className="share-btn" href="#" onClick={(e) => handleShare(e, blog.title)}><i className="fa-solid fa-share-nodes text-red"></i></a></li>
+                    <li><a className="facebook" href="https://www.facebook.com/" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a className="twitter" href="https://www.twitter.com" target="_blank" rel="noreferrer"><i className="fa-brands fa-twitter"></i></a></li>
+                    <li><a className="linkedin" href="http://www.linkedin.com" target="_blank" rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a></li> 
                   </ul>
                 </div>
               </div>
