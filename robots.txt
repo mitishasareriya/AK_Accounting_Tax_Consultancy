@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mitishasareriya.github.io/AK_Accounting_Tax_Consultancy/sitemap.xml
