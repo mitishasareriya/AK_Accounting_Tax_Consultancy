@@ -4,6 +4,8 @@ import { useAnime } from '../hooks/useAnime';
 import { ShapeWaveBottom } from '../components/common/ShapeWaveBottom';
 import { servicesData } from '../data/servicesData';
 import { projectsData } from '../data/projectsData';
+import SEO from '../seo/SEO';
+import { generateOrganizationSchema, generateLocalBusinessSchema } from '../seo/schemas';
 
 // --- DATA ARRAYS ---
 const featuresList = [
@@ -277,8 +279,17 @@ export const Home = () => {
   const slideAnime = '{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }';
   const fadeAnime = '{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }';
 
+  const orgSchema = generateOrganizationSchema();
+  const localBizSchema = generateLocalBusinessSchema();
+  const homeSchema = [orgSchema, localBizSchema];
+
   return (
     <div>
+      <SEO 
+        title="Home" 
+        description="AK Accounting provides professional accounting, taxation, audit and compliance services designed to support businesses at every stage of growth." 
+        schema={homeSchema}
+      />
       {/* 1. HERO SECTION */}
       <section className="cover-background full-screen ipad-top-space-margin py-0 md-h-750px sm-h-650px" style={{ backgroundImage: `url('/AK_Accounting_Tax_Consultancy/images/demo-it-business-banner-bg_1.png')` }}>
         <div className="opacity-very-light bg-black"></div>

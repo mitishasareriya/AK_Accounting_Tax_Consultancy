@@ -20,7 +20,7 @@ export const FinancialCalculators = () => {
       {/* end page title */}
 
       {/* start section */}
-      <section className="pt-3 bg-very-light-gray sm-pt-50px position-relative pb-24">
+      <section className="pt-3 bg-very-light-gray sm-pt-50px position-relative pb-12">
         <div className="container">
           <div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-8" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
             {calculatorsData.map((calc, index) => (
@@ -52,6 +52,20 @@ export const FinancialCalculators = () => {
             ))}
           </div>
         </div>
+        <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-lg-4 col-md-5 alt-font text-dark-gray text-center text-md-end fw-500 text-uppercase">Share this project</div>
+                    <div class="col-12 col-lg-2 col-md-2"><div class="w-100 h-1px bg-extra-medium-gray sm-mt-15px sm-mb-3px"></div></div>
+                    <div class="col-12 col-lg-4 col-md-5 text-center text-md-start elements-social social-icon-style-02">
+                        <ul class="medium-icon dark mb-0">
+                            <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a class="twitter" href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li> 
+                            <li><a class="linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li> 
+                            <li><a class="pinterest" href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         <ShapeWaveBottom className="bottom-minus-40px xl-bottom-0px absolute" />
       </section>
       {/* end section */}

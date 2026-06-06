@@ -1,7 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { useAnime } from '../hooks/useAnime';
 import { ShapeWaveBottom } from '../components/common/ShapeWaveBottom';
 import { PageHeader } from '../components/common/PageHeader';
+import SEO from '../seo/SEO';
+
+const contactSchema = z.object({
+  name: z.string().min(1, 'Please enter your name'),
+  email: z.string().min(1, 'Please enter your email').email('Please enter a valid email address'),
+  comment: z.string().optional()
+});
 
 // --- DATA ARRAYS ---
 
@@ -109,15 +119,15 @@ const ContactInfoItem = ({ method }) => (
   </div>
 );
 
-const FormField = ({ field, value, touched, error, onChange, onBlur }) => {
-  const isInvalid = touched && error;
-  const isValid = touched && !error;
+const FormField = ({ field, register, error, isDirty }) => {
+  const isInvalid = !!error;
+  const isValid = isDirty && !error;
 
   return (
     <>
       <label htmlFor={field.name} className="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">{field.label}</label>
       <div className={`position-relative form-group ${field.type === 'textarea' ? 'form-textarea mb-0' : 'mb-30px'}`}>
-        {(!touched || error || field.type === 'textarea') && (
+        {(error || field.type === 'textarea' || !isDirty) && (
           <span className="form-icon">
             <i className={`bi ${field.icon} text-dark-gray`}></i>
           </span>
@@ -127,29 +137,22 @@ const FormField = ({ field, value, touched, error, onChange, onBlur }) => {
           <textarea
             id={field.name}
             className={`fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control ${isValid ? 'input-valid' : ''}`}
-            name={field.name}
             placeholder={field.placeholder}
             rows="3"
-            value={value}
-            onChange={onChange}
-            onBlur={onBlur}
+            {...register(field.name)}
           ></textarea>
         ) : (
           <input
             id={field.name}
-            className={`fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control ${field.required ? 'required' : ''} ${isInvalid ? 'input-invalid' : ''} ${isValid ? 'input-valid' : ''}`}
+            className={`fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control ${isInvalid ? 'input-invalid' : ''} ${isValid ? 'input-valid' : ''}`}
             type={field.type}
-            name={field.name}
             placeholder={field.placeholder}
-            value={value}
-            onChange={onChange}
-            onBlur={onBlur}
-            required={field.required}
+            {...register(field.name)}
           />
         )}
 
-        {isValid && <i className="bi bi-check-circle-fill valid-indicator"></i>}
-        {isInvalid && field.type !== 'textarea' && <div className="validation-message error">{error}</div>}
+        {isValid && field.type !== 'textarea' && <i className="bi bi-check-circle-fill valid-indicator"></i>}
+        {isInvalid && field.type !== 'textarea' && <div className="validation-message error">{error.message}</div>}
       </div>
     </>
   );
@@ -159,49 +162,33 @@ const FormField = ({ field, value, touched, error, onChange, onBlur }) => {
 
 export const Contact = () => {
   useAnime();
-  const [formData, setFormData] = useState({ name: '', email: '', comment: '' });
   const [submitted, setSubmitted] = useState(false);
-  const [touched, setTouched] = useState({ name: false, email: false, comment: false });
-  const [errors, setErrors] = useState({});
+  
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, dirtyFields }
+  } = useForm({
+    resolver: zodResolver(contactSchema),
+    mode: 'onTouched'
+  });
 
-  const validate = () => {
-    let newErrors = {};
-    if (!formData.name.trim()) newErrors.name = 'Please fill out this field.';
-    if (!formData.email.trim()) {
-      newErrors.email = 'Please fill out this field.';
-    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address.';
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  useEffect(() => {
-    validate();
-  }, [formData]);
-
-  const handleBlur = (field) => {
-    setTouched(prev => ({ ...prev, [field]: true }));
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setTouched({ name: true, email: true, comment: true });
-    if (validate()) {
-      setSubmitted(true);
-      setFormData({ name: '', email: '', comment: '' });
-      setTouched({ name: false, email: false, comment: false });
-    }
+  const onSubmit = (data) => {
+    // API call goes here
+    console.log(data);
+    setSubmitted(true);
+    reset();
   };
 
   const slideUpAnime = '{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }';
 
   return (
     <div>
+      <SEO 
+        title="Contact Us" 
+        description="Get expert accounting & tax support for your business. Visit us or contact our team for GST filing, income tax planning, accounting, and bookkeeping."
+      />
       {/* start page title */}
       <PageHeader
         title="Contact us"
@@ -272,16 +259,14 @@ export const Contact = () => {
                   <button onClick={() => setSubmitted(false)} className="btn btn-dark-gray btn-large btn-round-edge btn-box-shadow">Send another message</button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="contact-form-style-03" noValidate>
+                <form onSubmit={handleSubmit(onSubmit)} className="contact-form-style-03" noValidate>
                   {formConfig.map((field) => (
                     <FormField
                       key={field.name}
                       field={field}
-                      value={formData[field.name]}
-                      touched={touched[field.name]}
+                      register={register}
                       error={errors[field.name]}
-                      onChange={handleChange}
-                      onBlur={() => handleBlur(field.name)}
+                      isDirty={dirtyFields[field.name]}
                     />
                   ))}
                   <div className="row mt-25px align-items-center">
