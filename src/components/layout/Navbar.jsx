@@ -65,9 +65,9 @@ export const Navbar = () => {
             {/* Logo */}
             <div className="col-auto col-xxl-3 col-lg-2 me-lg-0 me-auto">
               <Link className="navbar-brand" to="/">
-                <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-white@2x.png" alt="Crafto" className="default-logo" />
+                <img src="/AK_Accounting_Tax_Consultancy/images/logo_400_120.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-white@2x.png" alt="Crafto" className="default-logo" />
                 <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-black@2x.png" alt="Crafto" className="alt-logo" />
-                <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-black@2x.png" alt="Crafto" className="mobile-logo" style={{ maxHeight: '250px' }} />
+                <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical_3.svg" data-at2x="/AK_Accounting_Tax_Consultancy/images/demo-it-business-logo-black@2x.png" alt="Crafto" className="mobile-logo" style={{ maxHeight: '250px' }} />
               </Link>
             </div>
 
@@ -176,7 +176,7 @@ export const Navbar = () => {
               {/* Logo inside overlay */}
               <div className="text-center mb-5">
                 <Link className="navbar-brand d-inline-block text-center" to="/" onClick={closeMenu}>
-                  <img src="/AK_Accounting_Tax_Consultancy/images/logo_vertical.svg" alt="Crafto" style={{ maxHeight: '50px' }} />
+                  <img src="/AK_Accounting_Tax_Consultancy/images/logo_400_120.svg" alt="Crafto" style={{ maxHeight: '50px' }} />
                 </Link>
               </div>
 

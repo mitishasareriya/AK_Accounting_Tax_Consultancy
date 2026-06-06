@@ -371,19 +371,3 @@ ul.grid.portfolio-modern li.grid-item {
 }
 
 
-/* Increase Logo Size in Header and Footer */
-header .navbar-brand img {
-  max-height: 250px !important;
-  width: auto !important;
-}
-
-.left-modern-menu .left-modern-header .navbar-brand img {
-  max-height: 250px !important;
-  width: auto !important;
-}
-
-footer .footer-logo img {
-  max-height: 80px !important;
-  width: auto !important;
-}
-
