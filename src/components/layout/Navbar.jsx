@@ -176,7 +176,7 @@ export const Navbar = () => {
               {/* Logo inside overlay */}
               <div className="text-center mb-5">
                 <Link className="navbar-brand d-inline-block text-center" to="/" onClick={closeMenu}>
-                  <img src="/AK_Accounting_Tax_Consultancy/images/logo_400_120.svg" alt="Crafto" style={{ maxHeight: '50px' }} />
+                  <img src="/AK_Accounting_Tax_Consultancy/images/#00a650" alt="Crafto" style={{ maxHeight: '50px' }} />
                 </Link>
               </div>
 

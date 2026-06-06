@@ -64,7 +64,7 @@ header.sticky.sticky-active [data-header-hover="light"] .widget-text i {
     padding: 19px 40px;
 }
 .btn-gradient-purple-pink {
-    background-image: linear-gradient(to right, #0b58cb, #e94037, #0b58cb);
+    background-image: linear-gradient(to right, #0b58cb, #009541, #0b58cb);
     background-size: 200% auto;
     color: var(--white);
 }

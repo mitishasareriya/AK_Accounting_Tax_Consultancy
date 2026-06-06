@@ -2,8 +2,14 @@ import React from 'react';
 
 const Loader = () => {
   return (
-    <div className="flex items-center justify-center min-h-[50vh]">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
+    <div className="fixed inset-0 z-[9999] bg-white flex flex-col items-center justify-center gap-8 w-full h-screen">
+      {/* Logo */}
+      <img 
+        src="/AK_Accounting_Tax_Consultancy/images/logo_vertical_3.svg" 
+        alt="AK Accounting Logo" 
+        className="h-12 md:h-16 mb-4" 
+      />
+      
     </div>
   );
 };

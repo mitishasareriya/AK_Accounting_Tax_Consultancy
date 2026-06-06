@@ -214,7 +214,7 @@ const GrowthCard = ({ card }) => (
     <div className="bg-white h-100 border-radius-6px text-center box-shadow-quadruple-large box-shadow-quadruple-large-hover">
       <div className="pt-10 pb-10">
         {card.icon ? (
-          <i className={`${card.icon} text-gradient-purple-pink text-5xl`}></i>
+            <i className={`${card.icon} text-base-color text-5xl`}></i>
         ) : (
           <img src={card.img} className="h-40px md-h-35px sm-h-40px" alt="" />
         )}

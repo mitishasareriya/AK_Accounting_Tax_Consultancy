@@ -19,18 +19,24 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 text-gray-900 px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4 text-red-600">Something went wrong</h1>
-          <p className="text-lg text-gray-600 mb-8 max-w-lg">
-            We're sorry, but an unexpected error has occurred. Please try refreshing the page or navigating back home.
-          </p>
-          <button
-            onClick={() => window.location.href = '/'}
-            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-colors"
-          >
-            Go back Home
-          </button>
-        </div>
+        <section className="cover-background full-screen ipad-top-space-margin md-h-550px" style={{ backgroundImage: "url('/AK_Accounting_Tax_Consultancy/images/404-bg.jpg')" }}>
+          <div className="container h-100">
+              <div className="row align-items-center justify-content-center h-100">
+                  <div className="col-12 col-xl-6 col-lg-7 col-md-9 text-center">
+                      <h6 className="text-dark-gray fw-600 mb-5px text-uppercase">Ooops!</h6>
+                      <h1 className="fs-150 sm-fs-120 text-dark-gray fw-700 ls-minus-8px mb-20px"><i className="bi bi-exclamation-triangle"></i></h1>
+                      <h4 className="text-dark-gray fw-600 sm-fs-22 mb-10px ls-minus-1px">Something went wrong!</h4>
+                      <p className="mb-30px lh-28 sm-mb-30px w-55 md-w-80 sm-w-95 mx-auto">An unexpected error has occurred in the application. Please try refreshing the page or navigating back home.</p>
+                      <button 
+                        onClick={() => window.location.href = '/AK_Accounting_Tax_Consultancy/'} 
+                        className="btn btn-large left-icon btn-rounded btn-dark-gray btn-box-shadow text-transform-none"
+                      >
+                        <i className="fa-solid fa-rotate-right"></i>Reload Page
+                      </button>
+                  </div>
+              </div>
+          </div>
+        </section>
       );
     }
 
