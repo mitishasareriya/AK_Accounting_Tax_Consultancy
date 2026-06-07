@@ -24,6 +24,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(module => 
 const TermsConditions = lazy(() => import('./pages/TermsConditions').then(module => ({ default: module.TermsConditions })));
 const Copyright = lazy(() => import('./pages/Copyright').then(module => ({ default: module.Copyright })));
 const NotFound = lazy(() => import('./pages/NotFound').then(module => ({ default: module.NotFound })));
+const ComingSoon = lazy(() => import('./pages/ComingSoon').then(module => ({ default: module.ComingSoon })));
 
 // Scroll to top + re-init scroll animations on every route change
 const ScrollToTop = () => {
@@ -45,36 +46,48 @@ const ScrollToTop = () => {
   return null;
 };
 
+const AppContent = () => {
+  const location = useLocation();
+  const isComingSoon = location.pathname === '/coming-soon';
+
+  return (
+    <>
+      <ScrollToTop />
+      {/* Custom magic cursor — renders at root level above all content */}
+      <CustomCursor />
+      {!isComingSoon && <Navbar />}
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/"               element={<Home />} />
+          <Route path="/about"          element={<About />} />
+          <Route path="/services"       element={<Services />} />
+          <Route path="/services/:slug" element={<ServicesDetails />} />
+          <Route path="/financial-calculators" element={<FinancialCalculators />} />
+          <Route path="/financial-calculators/gst" element={<GstCalculator />} />
+          <Route path="/case-studies"   element={<CaseStudies />} />
+          <Route path="/portfolio/details" element={<SingleProject />} />
+          <Route path="/blog"           element={<Blog />} />
+          <Route path="/blog/:slug"     element={<BlogDetails />} />
+          <Route path="/contact"        element={<Contact />} />
+          <Route path="/privacy"        element={<PrivacyPolicy />} />
+          <Route path="/terms"          element={<TermsConditions />} />
+          <Route path="/copyright"      element={<Copyright />} />
+          <Route path="/coming-soon"    element={<ComingSoon />} />
+          {/* 404 Fallback */}
+          <Route path="*"               element={<NotFound />} />
+        </Routes>
+      </Suspense>
+      {!isComingSoon && <Footer />}
+    </>
+  );
+};
+
 function App() {
   return (
     <ThemeProvider>
       <ErrorBoundary>
         <Router basename="/AK_Accounting_Tax_Consultancy/">
-          <ScrollToTop />
-          {/* Custom magic cursor — renders at root level above all content */}
-          <CustomCursor />
-          <Navbar />
-          <Suspense fallback={<Loader />}>
-            <Routes>
-              <Route path="/"               element={<Home />} />
-              <Route path="/about"          element={<About />} />
-              <Route path="/services"       element={<Services />} />
-              <Route path="/services/:slug" element={<ServicesDetails />} />
-              <Route path="/financial-calculators" element={<FinancialCalculators />} />
-              <Route path="/financial-calculators/gst" element={<GstCalculator />} />
-              <Route path="/case-studies"   element={<CaseStudies />} />
-              <Route path="/portfolio/details" element={<SingleProject />} />
-              <Route path="/blog"           element={<Blog />} />
-              <Route path="/blog/:slug"     element={<BlogDetails />} />
-              <Route path="/contact"        element={<Contact />} />
-              <Route path="/privacy"        element={<PrivacyPolicy />} />
-              <Route path="/terms"          element={<TermsConditions />} />
-              <Route path="/copyright"      element={<Copyright />} />
-              {/* 404 Fallback */}
-              <Route path="*"               element={<NotFound />} />
-            </Routes>
-          </Suspense>
-          <Footer />
+          <AppContent />
         </Router>
       </ErrorBoundary>
     </ThemeProvider>
