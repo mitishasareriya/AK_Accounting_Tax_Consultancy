@@ -7,7 +7,7 @@ const SEO = ({
   name = 'AK Accounting & Tax Consultancy', 
   type = 'website',
   url = 'https://mitishasareriya.github.io/AK_Accounting_Tax_Consultancy/',
-  image = '/images/og-image.jpg',
+  image = 'https://mitishasareriya.github.io/AK_Accounting_Tax_Consultancy/images/logo_horizontal.png',
   schema
 }) => {
   return (
